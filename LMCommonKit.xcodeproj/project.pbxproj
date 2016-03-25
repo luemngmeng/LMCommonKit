@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */; };
 		89898A601CA0D86100C47BF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A5F1CA0D86100C47BF6 /* main.m */; };
 		89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A621CA0D86100C47BF6 /* AppDelegate.m */; };
 		89898A6E1CA0D86100C47BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89898A6D1CA0D86100C47BF6 /* Assets.xcassets */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		896634B21CA4CE1F00AC3DBC /* LMStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStringUtil.h; sourceTree = "<group>"; };
+		896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStringUtil.m; sourceTree = "<group>"; };
+		896634B51CA4D8B200AC3DBC /* LMInputLimit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMInputLimit.h; sourceTree = "<group>"; };
 		897949211CA3C6EC00298420 /* LMCommonkitHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMCommonkitHeader.h; sourceTree = "<group>"; };
 		89898A5B1CA0D86100C47BF6 /* LMCommonKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCommonKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89898A5F1CA0D86100C47BF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,10 +84,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		896634B11CA4CC1600AC3DBC /* LMStringUtil */ = {
+			isa = PBXGroup;
+			children = (
+				896634B21CA4CE1F00AC3DBC /* LMStringUtil.h */,
+				896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */,
+			);
+			path = LMStringUtil;
+			sourceTree = "<group>";
+		};
 		897949201CA3C6B300298420 /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				897949211CA3C6EC00298420 /* LMCommonkitHeader.h */,
+				896634B51CA4D8B200AC3DBC /* LMInputLimit.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -91,6 +105,7 @@
 		89898A521CA0D86100C47BF6 = {
 			isa = PBXGroup;
 			children = (
+				896634B11CA4CC1600AC3DBC /* LMStringUtil */,
 				897949201CA3C6B300298420 /* Header */,
 				89898A981CA0D9DC00C47BF6 /* LMViewControllerManager */,
 				89898A941CA0D96E00C47BF6 /* LMBaseViewController */,
@@ -298,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */,
+				896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */,
 				89898A971CA0D98100C47BF6 /* LMBaseViewController.m in Sources */,
 				89898A601CA0D86100C47BF6 /* main.m in Sources */,
 				89898A9B1CA0D9F200C47BF6 /* LMViewControllerManager.m in Sources */,

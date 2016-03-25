@@ -136,13 +136,13 @@
 
 
 /**
- *  present到viewControllerName的名称加载viewController，并将params的数据赋值给viewController
+ *  present到viewControllerName的名称加载viewController，并将params的数据赋值给viewController，以及是否带有导航栏
  *
  *  @param params   赋值给viewController数据
- *  @param animated 是否开启present动画
+ *  @param isNavigationController 是否带有导航栏
  *
  */
-- (void)presentViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params inNavigationController:(BOOL)inNavigationController;
+- (void)presentViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params isNavigationController:(BOOL)isNavigationController;
 
 
 /**
@@ -152,7 +152,7 @@
  *  @param animated 是否开启present动画
  *
  */
-- (void)presentViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params inNavigationController:(BOOL)inNavigationController animated:(BOOL)animated;
+- (void)presentViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params isNavigationController:(BOOL)isNavigationController animated:(BOOL)animated ;
 
 
 

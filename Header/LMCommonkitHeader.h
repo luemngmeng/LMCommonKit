@@ -9,6 +9,14 @@
 #ifndef LMCommonkitHeader_h
 #define LMCommonkitHeader_h
 
+// 日志输出
+#ifdef DEBUG
+
+#else
+
+  #define NSLog(...)
+
+#endif  
 
 /*****************************************系统版本、设备类型和名称******************************************/
 

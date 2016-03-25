@@ -9,6 +9,7 @@
 #import "LMViewControllerManager.h"
 
 #import "LMCommonkitHeader.h"
+#import "LMStringUtil.h"
 
 @interface LMViewControllerManager ()
 
@@ -137,7 +138,11 @@
 #pragma mark pop到指定name的viewController上，并将params的数据赋值给指定name的viewController
 - (NSArray *)popToViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params {
     
-    #warning 判断字符串是否为空
+    
+    if ([LMStringUtil isEmptyStringWith:viewControllerName]) {
+        return nil;
+    }
+    
     
     Class vcClass = NSClassFromString(viewControllerName);
     if (!vcClass) {
@@ -147,7 +152,6 @@
     
     __block __weak UIViewController *viewController = nil;
     NSArray *viewControllers = self.currentVC.navigationController.viewControllers;
-    
     [viewControllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         if ([obj isKindOfClass:vcClass]) {
@@ -235,13 +239,21 @@
 #pragma mark present到指定viewControllerName视图
 - (void)presentViewControllerWithName:(NSString *)viewControllerName {
     
-    [self presentViewControllerWithName:viewControllerName params:nil isNavigationController:NO];
+    [self presentViewControllerWithName:viewControllerName params:nil];
     
 }
 
 
 
 #pragma mark present到指定viewControllerName视图，并带配有params参数
+- (void)presentViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params {
+    
+    [self presentViewControllerWithName:viewControllerName params:params isNavigationController:NO];
+}
+
+
+
+#pragma mark present到指定viewControllerName视图，并带配有params参数,以及是否带有导航栏（默认带有present动画）
 - (void)presentViewControllerWithName:(NSString *)viewControllerName params:(NSDictionary *)params isNavigationController:(BOOL)isNavigationController {
     
     [self presentViewControllerWithName:viewControllerName params:params isNavigationController:isNavigationController animated:YES];
