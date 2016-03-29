@@ -169,6 +169,42 @@ static NSString * const LoadingError =  @"请求异常" ;
 
 
 
+/************************G C D **************/
+/**
+ *  子线程
+ *
+ *  @param block
+ *
+ *  @return
+ */
+#define GCDG_LOBAL(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+
+
+/**
+ *  主线程
+ *
+ *  @param block
+ *
+ *  @return
+ */
+#define GCD_MAIN(block) dispatch_async(dispatch_get_main_queue(), block)
+
+
+/**
+ *  时间线程
+ */
+#define GCD_TIME(time) dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC)
+
+
+/**
+ *  多少时间后执行
+ *
+ *  @param duration 时间
+ *  @param block    block
+ *
+ *  @return
+ */
+#define GCD_AFTER(duration,block) dispatch_after(GCD_TIME(duration),dispatch_get_main_queue(),block)
 
 
 #endif /* LMCommonkitHeader_h */

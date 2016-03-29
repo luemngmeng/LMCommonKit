@@ -8,7 +8,6 @@
 
 #import "LMStringUtil.h"
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
 @implementation LMStringUtil
 
