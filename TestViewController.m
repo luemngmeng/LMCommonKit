@@ -7,6 +7,10 @@
 //
 
 #import "TestViewController.h"
+#import "TestOneViewController.h"
+#import "TestTwoViewController.h"
+
+#import "LMViewControllerManager.h"
 
 @interface TestViewController ()
 
@@ -17,21 +21,72 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"我";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    /*
+    // 导航栏返回按钮
+    [self setNavBarBackButtonTitle:@"你好"];
+    [self setNavBarBackButtonBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
+     */
+    
+    
+    
+    // 导航栏左侧按钮
+    self.navBarLeftItemButtonTitle = @"你好";
+    [self setNavBarLeftButtonItemImageName:@"trReturn"];
+    
+    
+    
+    // 导航栏右侧按钮
+    self.navBarRightItemButtonTitle = @"爱你";
+    [self setNavBarRightButtonItemImageName:@"trReturn"];
+    
+    
+    
+    // 测试按钮
+    UIButton *testButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    testButton.frame = CGRectMake(100, 100, 100, 40);
+    [testButton setTitle:@"测试" forState:UIControlStateNormal];
+    [testButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [testButton addTarget:self action:@selector(testButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    testButton.layer.cornerRadius = 4;
+    testButton.layer.borderWidth = 1.0f;
+    testButton.clipsToBounds = YES;
+    [self.view addSubview:testButton];
+
 }
+
+#pragma mark 导航栏左侧按钮实现方法
+- (void)navBarLeftItemButtonClick {
+    
+    NSLog(@"实现左侧导航栏按钮的实现方法");
+    [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestOneViewController"];
+}
+
+
+#pragma mark 导航栏右侧按钮实现方法
+- (void)navBarRightItemButtonClick {
+    
+    NSLog(@"实现右侧导航栏按钮的实现方法");
+    [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestTwoViewController"];
+}
+
+
+#pragma mark 导航栏测试按钮实现方法
+- (void)testButtonClick {
+    
+    NSLog(@"测试按钮的实现方法");
+    [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestOneViewController"];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

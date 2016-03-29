@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "TestViewController.h"
+#import "LMNavigationController.h"
+
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
@@ -17,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    TestViewController *testVC = [[TestViewController alloc] init];
+    LMNavigationController *navCtrl = [[LMNavigationController alloc] initWithRootViewController:testVC];
+ 
+    self.window.rootViewController = navCtrl;
+    [self.window makeKeyAndVisible];
+    [self.window makeKeyWindow];
 
     return YES;
 }

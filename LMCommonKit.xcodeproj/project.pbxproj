@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89253C771CAA179600922136 /* TestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C761CAA179600922136 /* TestOneViewController.m */; };
+		89253C7A1CAA17AB00922136 /* TestTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C791CAA17AB00922136 /* TestTwoViewController.m */; };
+		89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C7F1CAA26CE00922136 /* LMNavigationController.m */; };
 		896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */; };
 		896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B81CA5057100AC3DBC /* LMCapitalUtil.m */; };
 		896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634BB1CA5098C00AC3DBC /* LMColor.m */; };
@@ -23,7 +26,6 @@
 		89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DDA1CA8D1BE00B8F364 /* UIColor+Extension.m */; };
 		89B23DDD1CA8D1BE00B8F364 /* THColor颜色名称图.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B23DDB1CA8D1BE00B8F364 /* THColor颜色名称图.png */; };
 		89B23DE01CA8D43C00B8F364 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */; };
-		89B23DE21CA8D6B600B8F364 /* trReturn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B23DE11CA8D6B600B8F364 /* trReturn@2x.png */; };
 		89B23DE51CA905DA00B8F364 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DE41CA905DA00B8F364 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89253C751CAA179600922136 /* TestOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestOneViewController.h; path = ../TestOneViewController.h; sourceTree = "<group>"; };
+		89253C761CAA179600922136 /* TestOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestOneViewController.m; path = ../TestOneViewController.m; sourceTree = "<group>"; };
+		89253C781CAA17AB00922136 /* TestTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTwoViewController.h; path = ../TestTwoViewController.h; sourceTree = "<group>"; };
+		89253C791CAA17AB00922136 /* TestTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTwoViewController.m; path = ../TestTwoViewController.m; sourceTree = "<group>"; };
+		89253C7E1CAA26CE00922136 /* LMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNavigationController.h; sourceTree = "<group>"; };
+		89253C7F1CAA26CE00922136 /* LMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNavigationController.m; sourceTree = "<group>"; };
 		896634B21CA4CE1F00AC3DBC /* LMStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStringUtil.h; sourceTree = "<group>"; };
 		896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStringUtil.m; sourceTree = "<group>"; };
 		896634B51CA4D8B200AC3DBC /* LMInputLimit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMInputLimit.h; sourceTree = "<group>"; };
@@ -79,7 +87,6 @@
 		89B23DDB1CA8D1BE00B8F364 /* THColor颜色名称图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "THColor颜色名称图.png"; sourceTree = "<group>"; };
 		89B23DDE1CA8D43C00B8F364 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		89B23DE11CA8D6B600B8F364 /* trReturn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trReturn@2x.png"; sourceTree = "<group>"; };
 		89B23DE31CA905DA00B8F364 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = ../TestViewController.h; sourceTree = "<group>"; };
 		89B23DE41CA905DA00B8F364 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = ../TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89253C7D1CAA269800922136 /* LMNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				89253C7E1CAA26CE00922136 /* LMNavigationController.h */,
+				89253C7F1CAA26CE00922136 /* LMNavigationController.m */,
+			);
+			path = LMNavigationController;
+			sourceTree = "<group>";
+		};
 		896634B11CA4CC1600AC3DBC /* LMStringUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +157,7 @@
 		89898A521CA0D86100C47BF6 = {
 			isa = PBXGroup;
 			children = (
+				89253C7D1CAA269800922136 /* LMNavigationController */,
 				89B23DD51CA8D02900B8F364 /* LMUIFont */,
 				89B23DD41CA8D01500B8F364 /* LMUIColor */,
 				89B23DD31CA8D00300B8F364 /* LMUIImage */,
@@ -174,6 +191,10 @@
 				89898A621CA0D86100C47BF6 /* AppDelegate.m */,
 				89B23DE31CA905DA00B8F364 /* TestViewController.h */,
 				89B23DE41CA905DA00B8F364 /* TestViewController.m */,
+				89253C751CAA179600922136 /* TestOneViewController.h */,
+				89253C761CAA179600922136 /* TestOneViewController.m */,
+				89253C781CAA17AB00922136 /* TestTwoViewController.h */,
+				89253C791CAA17AB00922136 /* TestTwoViewController.m */,
 				89898A5E1CA0D86100C47BF6 /* Supporting Files */,
 			);
 			path = LMCommonKit;
@@ -183,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				89898A6D1CA0D86100C47BF6 /* Assets.xcassets */,
-				89B23DE11CA8D6B600B8F364 /* trReturn@2x.png */,
 				89898A6F1CA0D86100C47BF6 /* LaunchScreen.storyboard */,
 				89898A721CA0D86100C47BF6 /* Info.plist */,
 				89898A5F1CA0D86100C47BF6 /* main.m */,
@@ -369,7 +389,6 @@
 			files = (
 				89B23DDD1CA8D1BE00B8F364 /* THColor颜色名称图.png in Resources */,
 				89898A711CA0D86100C47BF6 /* LaunchScreen.storyboard in Resources */,
-				89B23DE21CA8D6B600B8F364 /* trReturn@2x.png in Resources */,
 				89898A6E1CA0D86100C47BF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +424,9 @@
 				89898A601CA0D86100C47BF6 /* main.m in Sources */,
 				89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */,
 				89898A9B1CA0D9F200C47BF6 /* LMViewControllerManager.m in Sources */,
+				89253C771CAA179600922136 /* TestOneViewController.m in Sources */,
+				89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */,
+				89253C7A1CAA17AB00922136 /* TestTwoViewController.m in Sources */,
 				89B23DE01CA8D43C00B8F364 /* UIImage+Extension.m in Sources */,
 				896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */,
 			);

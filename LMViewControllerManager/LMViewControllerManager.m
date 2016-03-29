@@ -11,6 +11,8 @@
 #import "LMCommonkitHeader.h"
 #import "LMStringUtil.h"
 
+#import "LMNavigationController.h"
+
 @interface LMViewControllerManager ()
 
 @end
@@ -216,12 +218,11 @@
     
     if (isNavigationController && self.currentVC) {
         
-#warning 暂时用系统的UINavigationController 后期改为自定义的
-        UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:viewController];
+
+        LMNavigationController *navCtrl = [[LMNavigationController alloc] initWithRootViewController:viewController];
         if (TARGET_IS_IOS7_OR_LATER) {
             
             [self.currentVC.view.window.rootViewController presentViewController:navCtrl animated:animated completion:nil];
-            
         } else {
             
             [self.currentVC presentViewController:navCtrl animated:animated completion:nil];
@@ -283,7 +284,7 @@
     if (isExistNibFile) {
         viewController = [[currentClass alloc] initWithNibName:name bundle:nil];
     } else {
-        viewController = [[UIViewController alloc] init];
+        viewController = [[currentClass alloc] init];
     }
     
     if (params) { // 配置ViewController的参数

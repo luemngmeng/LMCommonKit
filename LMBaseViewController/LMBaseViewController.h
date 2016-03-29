@@ -45,6 +45,12 @@ typedef void(^LMBackButtonClickBlock)(void);
 @property (nonatomic, assign) BOOL statusBarHidden;
 
 
+/**
+ *  保存前一个界面的截屏图
+ */
+@property (nonatomic, strong) UIImage *screenShotImage;
+
+
 /**********************导航栏上的内容设置************************/
 /**
  *  左侧导航条按钮

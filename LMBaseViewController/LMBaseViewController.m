@@ -11,7 +11,7 @@
 
 #import "UIImage+Extension.h"
 
-@interface LMBaseViewController ()
+@interface LMBaseViewController () <UINavigationControllerDelegate,UIGestureRecognizerDelegate>
 
 @end
 
@@ -22,6 +22,7 @@
 - (void)dealloc {
     
     // 视图控制器释放时，该做的操作
+    
     
     // 取消正在执行的网络请求
     [self  cancelRequestingTask];
@@ -85,7 +86,7 @@
         // 添加自定义返回按钮
         [self setNavigationBackButtonItemWithDefualtStatus];
     }
-    self.navigationController.navigationBar.translucent = NO;  // 默认navigationBar背景图
+    self.navigationController.navigationBar.translucent = NO;  // 默认NO navigationBar背景图是不透明得
     
     // 配置子视图
     [self setupSubViews];
@@ -108,6 +109,14 @@
     
     [super viewDidAppear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:self.statusBarStyle animated:animated];
+    
+
+    // 设置系统的侧滑手势可用
+    /*
+     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+         self.navigationController.interactivePopGestureRecognizer.delegate = self;
+         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+     }*/
     
 }
 
@@ -136,6 +145,9 @@
         _backButton.frame = CGRectMake(0, 0, 16.0f, 30.0f);
         [_backButton setImage:[UIImage imageNamed:@"trReturn"] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(backButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
+        self.navigationItem.leftBarButtonItem = backButtonItem;
     }
     
     return _backButton;
@@ -187,6 +199,7 @@
     if (self && self.backButtonClickBlock) {
         
         self.backButtonClickBlock();
+        
     } else {
         
         [self.navigationController popViewControllerAnimated:YES];
@@ -202,7 +215,8 @@
         _navBarLeftItemButton = [LMButton buttonWithType:UIButtonTypeCustom];
         _navBarLeftItemButton.frame = CGRectMake(0, 0, 60, 40);
         _navBarLeftItemButton.titleLabel.font = [UIFont systemFontOfSize:15];
-        _navBarLeftItemButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+        _navBarLeftItemButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        [_navBarLeftItemButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_navBarLeftItemButton addTarget:self action:@selector(navBarLeftItemButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
         UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_navBarLeftItemButton];
@@ -241,7 +255,8 @@
         _navBarRightItemButton = [LMButton buttonWithType:UIButtonTypeCustom];
         _navBarRightItemButton.frame = CGRectMake(0, 0, 60, 40);
         _navBarRightItemButton.titleLabel.font = [UIFont systemFontOfSize:15];
-        _navBarRightItemButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+        //_navBarRightItemButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+        [_navBarRightItemButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_navBarRightItemButton addTarget:self action:@selector(navBarRightItemButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
         UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_navBarRightItemButton];
