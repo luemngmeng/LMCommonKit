@@ -10,13 +10,23 @@
 
 @implementation LMSegmentItem
 
-- (instancetype)initWithTitle:(NSString *)title normalTitleColor:(UIColor *)normalTitleColor selectTitleColor:(UIColor *)selectTitleColor isShowRedDot:(BOOL)isShowRedDot{
+- (instancetype)initWithTitle:(NSString *)title
+             normalTitleColor:(UIColor *)normalTitleColor
+             selectTitleColor:(UIColor *)selectTitleColor
+               normalTextFont:(UIFont *)normalTextFont
+               selectTextFont:(UIFont *)selectTextFont
+                 isShowRedDot:(BOOL)isShowRedDot{
     
     if (self = [super init]) {
         
         self.title = title;
+        
         self.normalTitleColor = normalTitleColor;
         self.selectTitleColor = selectTitleColor;
+        
+        self.normalTextFont = normalTextFont;
+        self.selectTextFont = selectTextFont;
+        
         self.isShowRedDot = isShowRedDot;
     }
     

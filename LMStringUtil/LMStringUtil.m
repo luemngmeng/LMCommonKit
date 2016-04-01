@@ -354,7 +354,41 @@
     }
     
     return nil;
-    
 }
+
+
+
+#pragma mark 计算文本的大小CGSize
++ (CGSize)calculateTextSizeWithText:(NSString *)stretxt TextFont:(UIFont *)textFont constrainedToSize:(CGSize)constrainedMaxSize lineBreakMode:(NSLineBreakMode)lineBreakMode textAlignment:(NSTextAlignment)textAlignment {
+    
+    CGSize textSize;
+    if (!textFont){
+        textFont = [UIFont systemFontOfSize:14];  // 默认字体大小是14
+    }
+    
+    // 计算文本的高度
+    if ([stretxt respondsToSelector:@selector(sizeWithFont:constrainedToSize:lineBreakMode:)]){ // 这方法只在ios7中有用，ios7之后被废弃了
+        
+        textSize = [stretxt sizeWithFont:textFont constrainedToSize:constrainedMaxSize lineBreakMode:lineBreakMode];
+        
+    } else if ([stretxt respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
+        
+        
+        NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.lineBreakMode = lineBreakMode;
+        paragraphStyle.alignment = textAlignment;
+        NSDictionary * attributes = @{NSFontAttributeName :textFont,
+                                      NSParagraphStyleAttributeName : paragraphStyle};
+        // options为默认的
+        textSize = [stretxt boundingRectWithSize:constrainedMaxSize
+                                               options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
+                                            attributes:attributes
+                                               context:nil].size;
+    }
+    
+    return textSize;
+}
+
+
 
 @end

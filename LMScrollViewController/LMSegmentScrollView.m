@@ -15,7 +15,8 @@
     
     self = [super init];
     if (self) {
-        
+        // 配置scrollView视图
+        [self initContentView];
     }
     
     return self;
@@ -26,7 +27,8 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        
+        // 配置scrollView视图
+        [self initContentView];
     }
     
     return self;
@@ -37,7 +39,8 @@
     
     self = [super initWithCoder:aDecoder];
     if (self) {
-        
+        // 配置scrollView视图
+        [self initContentView];
     }
     
     return self;
@@ -47,6 +50,17 @@
 - (void)awakeFromNib {
     
     [super awakeFromNib];
+    // 配置scrollView视图
+    [self initContentView];
+}
+
+
+- (void)initContentView {
+    
+    // 配置scrollView视图
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.bounces = NO;
     
 }
 
@@ -55,12 +69,6 @@
 #pragma mark - Public Method
 #pragma mark 配置scrollView及子视图（重写父视图的方法）
 - (void)setupScrollView {
-    
-    
-    // 配置scrollView视图
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.showsVerticalScrollIndicator = NO;
-    
     
     
     

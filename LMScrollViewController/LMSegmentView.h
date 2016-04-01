@@ -12,6 +12,9 @@
 
 @interface LMSegmentView : LMBaseView
 
-
+/**
+ *  contentButton
+ */
+@property (nonatomic,strong) UIButton *contentButton;
 
 @end

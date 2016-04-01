@@ -17,8 +17,8 @@
 		896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */; };
 		896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B81CA5057100AC3DBC /* LMCapitalUtil.m */; };
 		896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634BB1CA5098C00AC3DBC /* LMColor.m */; };
-		896E24B31CAB6365001BA9EA /* LMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 896E24B21CAB6365001BA9EA /* LMSegmentView.m */; };
-		896E24B61CAB6A60001BA9EA /* LMSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 896E24B51CAB6A60001BA9EA /* LMSegmentItem.m */; };
+		8974B9941CACB682007FDFF5 /* LMSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8974B9911CACB682007FDFF5 /* LMSegmentItem.m */; };
+		8974B9951CACB682007FDFF5 /* LMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8974B9931CACB682007FDFF5 /* LMSegmentView.m */; };
 		89898A601CA0D86100C47BF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A5F1CA0D86100C47BF6 /* main.m */; };
 		89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A621CA0D86100C47BF6 /* AppDelegate.m */; };
 		89898A6E1CA0D86100C47BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89898A6D1CA0D86100C47BF6 /* Assets.xcassets */; };
@@ -76,10 +76,10 @@
 		896634B81CA5057100AC3DBC /* LMCapitalUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCapitalUtil.m; sourceTree = "<group>"; };
 		896634BA1CA5098C00AC3DBC /* LMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMColor.h; sourceTree = "<group>"; };
 		896634BB1CA5098C00AC3DBC /* LMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMColor.m; sourceTree = "<group>"; };
-		896E24B11CAB6365001BA9EA /* LMSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentView.h; sourceTree = "<group>"; };
-		896E24B21CAB6365001BA9EA /* LMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentView.m; sourceTree = "<group>"; };
-		896E24B41CAB6A60001BA9EA /* LMSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentItem.h; sourceTree = "<group>"; };
-		896E24B51CAB6A60001BA9EA /* LMSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentItem.m; sourceTree = "<group>"; };
+		8974B9901CACB682007FDFF5 /* LMSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentItem.h; sourceTree = "<group>"; };
+		8974B9911CACB682007FDFF5 /* LMSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentItem.m; sourceTree = "<group>"; };
+		8974B9921CACB682007FDFF5 /* LMSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentView.h; sourceTree = "<group>"; };
+		8974B9931CACB682007FDFF5 /* LMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentView.m; sourceTree = "<group>"; };
 		897949211CA3C6EC00298420 /* LMCommonkitHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMCommonkitHeader.h; sourceTree = "<group>"; };
 		89898A5B1CA0D86100C47BF6 /* LMCommonKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCommonKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89898A5F1CA0D86100C47BF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +155,10 @@
 				89253C831CAA6FB900922136 /* LMBaseScrollViewController.m */,
 				89253C891CAA7BBD00922136 /* LMBaseScrollView.h */,
 				89253C8A1CAA7BBD00922136 /* LMBaseScrollView.m */,
+				8974B9901CACB682007FDFF5 /* LMSegmentItem.h */,
+				8974B9911CACB682007FDFF5 /* LMSegmentItem.m */,
+				8974B9921CACB682007FDFF5 /* LMSegmentView.h */,
+				8974B9931CACB682007FDFF5 /* LMSegmentView.m */,
 				89253C8C1CAA7C2700922136 /* LMSegmentScrollView.h */,
 				89253C8D1CAA7C2700922136 /* LMSegmentScrollView.m */,
 			);
@@ -166,10 +170,6 @@
 			children = (
 				89253C861CAA788400922136 /* LMBaseView.h */,
 				89253C871CAA788400922136 /* LMBaseView.m */,
-				896E24B11CAB6365001BA9EA /* LMSegmentView.h */,
-				896E24B21CAB6365001BA9EA /* LMSegmentView.m */,
-				896E24B41CAB6A60001BA9EA /* LMSegmentItem.h */,
-				896E24B51CAB6A60001BA9EA /* LMSegmentItem.m */,
 			);
 			path = LMBaseView;
 			sourceTree = "<group>";
@@ -540,12 +540,12 @@
 				896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */,
 				89B23DD21CA8CC8900B8F364 /* LMButton.m in Sources */,
 				89898A971CA0D98100C47BF6 /* LMBaseViewController.m in Sources */,
+				8974B9941CACB682007FDFF5 /* LMSegmentItem.m in Sources */,
 				896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */,
-				896E24B61CAB6A60001BA9EA /* LMSegmentItem.m in Sources */,
+				8974B9951CACB682007FDFF5 /* LMSegmentView.m in Sources */,
 				89B23DD81CA8D0E600B8F364 /* UIFont+Extension.m in Sources */,
 				89B23DE51CA905DA00B8F364 /* TestViewController.m in Sources */,
 				89253C8E1CAA7C2700922136 /* LMSegmentScrollView.m in Sources */,
-				896E24B31CAB6365001BA9EA /* LMSegmentView.m in Sources */,
 				89898A601CA0D86100C47BF6 /* main.m in Sources */,
 				89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */,
 				89253C841CAA6FB900922136 /* LMBaseScrollViewController.m in Sources */,

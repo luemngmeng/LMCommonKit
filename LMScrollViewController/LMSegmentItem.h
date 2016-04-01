@@ -31,6 +31,18 @@
 
 
 /**
+ *  normalTextFont
+ */
+@property (nonatomic,strong) UIFont *normalTextFont;
+
+
+/**
+ *  selectTextFont
+ */
+@property (nonatomic,strong) UIFont *selectTextFont;
+
+
+/**
  *  是否显示红点
  */
 @property (nonatomic,assign) BOOL isShowRedDot;

@@ -23,6 +23,7 @@
 
 #import "LMInputLimit.h"
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface LMStringUtil : NSObject
 
@@ -163,6 +164,18 @@
  *  @return true or false
  */
 + (BOOL)checkValidWithRegex:(NSString *)regex string:(NSString *)string;
+
+
+
+/**
+ *  计算文本的大小
+ *
+ *  @param textFont           文本的Font
+ *  @param constrainedMaxSize 能计算的最大尺寸
+ *
+ *  @return 改文本的大小CGSize
+ */
++ (CGSize)calculateTextSizeWithText:(NSString *)stretxt TextFont:(UIFont *)textFont constrainedToSize:(CGSize)constrainedMaxSize lineBreakMode:(NSLineBreakMode)lineBreakMode textAlignment:(NSTextAlignment)textAlignment;
 
 
 
