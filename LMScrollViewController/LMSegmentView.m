@@ -7,6 +7,7 @@
 //
 #import "Masonry.h"
 #import "LMSegmentView.h"
+#import "UIFont+Extension.h"
 
 @interface LMSegmentView ()
 
@@ -67,6 +68,7 @@
 }
 
 
+#pragma mark 自定义初始化方法
 - (instancetype)initWithFrame:(CGRect)frame segmentItem:(LMSegmentItem *)segmentItem {
     
     self = [super initWithFrame:frame];
@@ -83,6 +85,7 @@
 #pragma mark 配置视图
 - (void)initContentView {
     
+    self.userInteractionEnabled = YES;
     // 添加content Button
     [self addSubview:self.contentButton];
     [self.contentButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -91,14 +94,6 @@
         make.width.equalTo(self.mas_width);
         make.height.equalTo(self.mas_height);
     }];
-    
-    // 配置contentButton
-    if (self.segmentItem) {
-        [self.contentButton setTitle:self.segmentItem.title forState:UIControlStateNormal];
-        [self.contentButton setTitleColor:self.segmentItem.normalTitleColor forState:UIControlStateNormal];
-        [self.contentButton setTitleColor:self.segmentItem.selectTitleColor forState:UIControlStateSelected];
-        
-    }
 }
 
 
@@ -108,7 +103,15 @@
     if (!_contentButton) {
         _contentButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_contentButton addTarget:self action:@selector(contentButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [_contentButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        // 配置contentButton
+        if (self.segmentItem) {
+            [self.contentButton setTitle:self.segmentItem.title forState:UIControlStateNormal];
+            [self.contentButton setTitleColor:self.segmentItem.normalTitleColor forState:UIControlStateNormal];
+            [self.contentButton setTitleColor:self.segmentItem.selectTitleColor forState:UIControlStateSelected];
+            [self.contentButton setTitleColor:self.segmentItem.selectTitleColor forState:UIControlStateHighlighted];
+            [self.contentButton.titleLabel setFont:THSystemFont([self.segmentItem.normalTextFont intValue])];
+        }
     }
     
     return _contentButton;
@@ -117,7 +120,7 @@
 
 #pragma mark contentButton的点击方法
 - (void)contentButtonClick:(UIButton *)sender {
-    
+    NSLog(@"点击了button");
 }
 
 

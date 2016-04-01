@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LMCommonkitHeader.h"
 
 /**
  *  系统默认字体 宋体
@@ -26,6 +27,26 @@
  *  @return 字体大小
  */
 #define SystemBoldFontOfSize(fontSize)         [UIFont fontWithName:@"Helvetica-Bold" size:(fontSize)]
+
+
+/**
+ *  字体基于苹果4字体比例
+ *
+ *  @param x
+ *
+ *  @return 适配后的字体大小
+ */
+#define THSystemFont(x) [UIFont systemFontOfSize:floor(x * DEVICE_SCREEN_WIDTH_SCALE)]
+
+
+/**
+ *  字体基于苹果6的字体比例
+ *
+ *  @param x 字体大小
+ *
+ *  @return 适配后的字体大小
+ */
+#define THSystemFont_6(x) [UIFont systemFontOfSize:floor(x * DEVICE_SCREEN_WIDTH_SCALE_6)]
 
 
 

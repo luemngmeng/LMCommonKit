@@ -51,13 +51,15 @@
 #pragma mark - Private Method
 - (void)initContentView {
     
+    /*
     // 添加默认的ScrollView视图
     self.scrollView = [[UIScrollView alloc] init];
     [self addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
-    }];
-    
+    }];*/
+
+
 }
 
 #pragma mark - Public Method

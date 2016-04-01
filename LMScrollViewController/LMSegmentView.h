@@ -17,4 +17,15 @@
  */
 @property (nonatomic,strong) UIButton *contentButton;
 
+
+/**
+ *  自定义初始化方法
+ *
+ *  @param frame
+ *  @param segmentItem
+ *
+ *  @return
+ */
+- (instancetype)initWithFrame:(CGRect)frame segmentItem:(LMSegmentItem *)segmentItem ;
+
 @end

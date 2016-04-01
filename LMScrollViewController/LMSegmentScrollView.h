@@ -7,7 +7,19 @@
 //
 
 #import "LMBaseScrollView.h"
+#import "LMSegmentItem.h"
 
 @interface LMSegmentScrollView : LMBaseScrollView
+
+
+/**
+ *  自定义初始化SegmentScrollView的方法
+ *
+ *  @param frame
+ *  @param itemArray
+ *
+ *  @return 
+ */
+- (instancetype)initWithFrame:(CGRect)frame itemArray:(NSArray *)itemArray ;
 
 @end

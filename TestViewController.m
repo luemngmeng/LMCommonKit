@@ -11,6 +11,7 @@
 #import "TestTwoViewController.h"
 
 #import "LMViewControllerManager.h"
+#import "LMScrollViewController/LMSegmentScrollView.h"
 
 @interface TestViewController ()
 
@@ -32,19 +33,21 @@
      */
     
     
-    
+    /*
     // 导航栏左侧按钮
     self.navBarLeftItemButtonTitle = @"你好";
     [self setNavBarLeftButtonItemImageName:@"trReturn"];
+    */
     
     
-    
+    /*
     // 导航栏右侧按钮
     self.navBarRightItemButtonTitle = @"爱你";
     [self setNavBarRightButtonItemImageName:@"trReturn"];
+    */
     
     
-    
+    /*
     // 测试按钮
     UIButton *testButton = [UIButton buttonWithType:UIButtonTypeSystem];
     testButton.frame = CGRectMake(100, 100, 100, 40);
@@ -56,7 +59,12 @@
     testButton.layer.borderWidth = 1.0f;
     testButton.clipsToBounds = YES;
     [self.view addSubview:testButton];
-
+     */
+    
+    NSArray *itemArray = [[NSArray alloc] initWithObjects:@"你好说吧",@"我好说呢",@"大家好吧",@"才是好吧" ,@"你说打的" ,@"是不是吗" ,nil];
+    LMSegmentScrollView *segmentScrollView = [[LMSegmentScrollView alloc] initWithFrame:CGRectMake(0, 100,self.view.frame.size.width, 50) itemArray:itemArray];
+    [segmentScrollView setupScrollView];
+    [self.view addSubview:segmentScrollView];
 }
 
 #pragma mark 导航栏左侧按钮实现方法

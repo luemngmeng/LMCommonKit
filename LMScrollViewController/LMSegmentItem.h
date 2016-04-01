@@ -33,7 +33,7 @@
 /**
  *  normalTextFont
  */
-@property (nonatomic,strong) UIFont *normalTextFont;
+@property (nonatomic,strong) NSString *normalTextFont;
 
 
 /**
@@ -46,6 +46,24 @@
  *  是否显示红点
  */
 @property (nonatomic,assign) BOOL isShowRedDot;
+
+
+/**
+ *  自定义初始化方法
+ *
+ *  @param title            文本
+ *  @param normalTitleColor 文本的字体正常状态的颜色
+ *  @param selectTitleColor 文本的字体正常状态的颜色
+ *  @param normalTextFont   文本的字体正常状态的颜色
+ *  @param isShowRedDot     是否显示红点
+ *
+ *  @return segmentItem类
+ */
+- (instancetype)initWithTitle:(NSString *)title
+             normalTitleColor:(UIColor *)normalTitleColor
+             selectTitleColor:(UIColor *)selectTitleColor
+               normalTextFont:(NSString *)normalTextFont
+                 isShowRedDot:(BOOL)isShowRedDot;
 
 
 @end
