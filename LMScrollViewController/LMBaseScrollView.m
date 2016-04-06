@@ -64,7 +64,7 @@
 
 #pragma mark - Public Method
 #pragma mark 设置ScrollView 子类可重写这个方法来配置当前的scroolView视图
-- (void)setupScrollView {
+- (void)setupScrollViewWithModel:(id)model {
     
 }
 

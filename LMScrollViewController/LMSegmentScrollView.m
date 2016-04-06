@@ -7,18 +7,10 @@
 //  segmentScrollow默认只放四个（也就是说在5或之前的宽度为80）
 
 #import "LMSegmentScrollView.h"
-#import "LMSegmentView.h"
-#import "Masonry.h"
 
+@interface LMSegmentScrollView () {
 
-#define  SEGMENTVIEW_WIDTH  (CGFloat)self.frame.size.width / 4
-
-@interface LMSegmentScrollView ()<UIScrollViewDelegate>
-
-/**
- *  存储的各个内容的数据
- */
-@property (nonatomic,strong) NSArray *itemArray;
+}
 
 @end
 
@@ -69,7 +61,7 @@
 }
 
 
-#pragma mark 自定义初始化方法
+#pragma mark 自定义初始化方法（默认不带红点和指示线条）
 - (instancetype)initWithFrame:(CGRect)frame itemArray:(NSArray *)itemArray {
     
     self = [super initWithFrame:frame];
@@ -98,20 +90,20 @@
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-                       
     
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.bounces = YES;
-    self.scrollView.delegate = self;
     self.scrollView.userInteractionEnabled = YES;
+    
+    // 配置子视图
+    [self configSubView];
 
 }
 
 
-#pragma mark - Public Method
-#pragma mark 配置scrollView及子视图（重写父视图的方法）
-- (void)setupScrollView {
+#pragma mak 配置子视图
+- (void)configSubView {
     
     // 获取scrollow的子视图的宽高和大小
     NSInteger count  = self.itemArray.count;
@@ -125,10 +117,10 @@
     
     // 设置scrollow的内容
     self.scrollView.contentSize = CGSizeMake( segmentViewWidth * count, segmentViewHegith);
-    self.scrollView.pagingEnabled = NO;
+    self.scrollView.pagingEnabled = YES;
     
     
-    // 配置子视图
+    // 配置scrollow子视图
     [self setupContentViewWithSegmentViewWidth:segmentViewWidth segmentViewHeight:segmentViewHegith itemArrayCount:count];
     
 }
@@ -141,37 +133,38 @@
     for (int i = 0 ; i < itemArrayCount; i++) {
         
         NSString *title = self.itemArray[i];
-        LMSegmentItem *segmentItem = [[LMSegmentItem alloc] initWithTitle:title normalTitleColor:[UIColor blackColor] selectTitleColor:[UIColor blueColor] normalTextFont:@"14" isShowRedDot:NO];
+        LMSegmentItem *segmentItem = [[LMSegmentItem alloc] initWithTitle:title normalTitleColor:[UIColor blackColor] selectTitleColor:[UIColor blueColor] normalTextFont:CONTENT_BUTTON_TEXT_FONT];
         LMSegmentView *segmentView = [[LMSegmentView alloc] initWithFrame:CGRectMake(segmentViewWidth * i, 0, segmentViewWidth, segmentViewHeight) segmentItem:segmentItem];
-        /*
-        switch (i) {
-                
-            case 0: {
-                segmentView.backgroundColor = [UIColor redColor];
-            }
-                break;
-                
-            case 1: {
-                segmentView.backgroundColor = [UIColor yellowColor];
-            }
-                break;
-                
-            case 2: {
-                segmentView.backgroundColor = [UIColor blueColor];
-            }
-                break;
-                
-            case 3: {
-                segmentView.backgroundColor = [UIColor purpleColor];
-            }
-                break;
-                
-            default:
-                break;
-        }*/
+        [segmentView.contentButton addTarget:self action:@selector(contentButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        segmentView.isShowRedDot = NO;
+        segmentView.tag = SEGMENT_VIEW_TAG + i ;
+        segmentView.contentButton.tag = CONTENT_BUTTON_TAG + i ;
         
         [self.scrollView addSubview:segmentView];
+        
     }
+    
+    // 设置子视图、默认状态在index为0处
+    [self setupScrollView];
+    
+}
+
+#pragma mark - Public Method
+#pragma mark 配置scrollView及子视图（重写父视图的方法）
+- (void)setupScrollViewWithModel:(id)model {
+    
+}
+
+
+#pragma mark 设置子视图
+- (void)setupScrollView {
+    
+}
+
+
+#pragma mark contentButton实现的点击事件
+- (void)contentButtonClick:(UIButton *)button {
+    
 }
 
 

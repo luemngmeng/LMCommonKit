@@ -43,12 +43,6 @@
 
 
 /**
- *  是否显示红点
- */
-@property (nonatomic,assign) BOOL isShowRedDot;
-
-
-/**
  *  自定义初始化方法
  *
  *  @param title            文本
@@ -62,8 +56,7 @@
 - (instancetype)initWithTitle:(NSString *)title
              normalTitleColor:(UIColor *)normalTitleColor
              selectTitleColor:(UIColor *)selectTitleColor
-               normalTextFont:(NSString *)normalTextFont
-                 isShowRedDot:(BOOL)isShowRedDot;
+               normalTextFont:(NSString *)normalTextFont;
 
 
 @end

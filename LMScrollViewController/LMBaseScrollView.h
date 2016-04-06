@@ -19,6 +19,6 @@
 /**
  *  设置scrollView视图
  */
-- (void)setupScrollView ;
+- (void)setupScrollViewWithModel:(id)model;
 
 @end

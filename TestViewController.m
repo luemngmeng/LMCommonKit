@@ -11,7 +11,8 @@
 #import "TestTwoViewController.h"
 
 #import "LMViewControllerManager.h"
-#import "LMScrollViewController/LMSegmentScrollView.h"
+#import "LMSegmentScrollView.h"
+#import "LMSlidingLineSegmentView.h"
 
 @interface TestViewController ()
 
@@ -61,10 +62,15 @@
     [self.view addSubview:testButton];
      */
     
-    NSArray *itemArray = [[NSArray alloc] initWithObjects:@"你好说吧",@"我好说呢",@"大家好吧",@"才是好吧" ,@"你说打的" ,@"是不是吗" ,nil];
-    LMSegmentScrollView *segmentScrollView = [[LMSegmentScrollView alloc] initWithFrame:CGRectMake(0, 100,self.view.frame.size.width, 50) itemArray:itemArray];
-    [segmentScrollView setupScrollView];
+    NSArray *itemArray11 = [[NSArray alloc] initWithObjects:@"你好说吧",@"我好说呢",@"大家好吧",@"才是好吧" ,@"你说打的" ,@"是不是吗" ,nil];
+    LMSegmentScrollView *segmentScrollView = [[LMSegmentScrollView alloc] initWithFrame:CGRectMake(0, 100,self.view.frame.size.width, 40) itemArray:itemArray11];
+    [segmentScrollView setupScrollViewWithModel:nil];
     [self.view addSubview:segmentScrollView];
+    
+    NSArray *itemArray22 = [[NSArray alloc] initWithObjects:@"你好1",@"我好1",@"大家好1",@"是好1" ,@"你说2" ,@"是不2",@"大家好2",@"是好2" ,@"你说3" ,@"是不3" ,nil];
+    LMSlidingLineSegmentView *slidingLineSegmentScrollView = [[LMSlidingLineSegmentView alloc] initWithFrame:CGRectMake(0, 200,self.view.frame.size.width, 40) itemArray:itemArray22];
+    [slidingLineSegmentScrollView setupScrollViewWithModel:nil];
+    [self.view addSubview:slidingLineSegmentScrollView];
 }
 
 #pragma mark 导航栏左侧按钮实现方法

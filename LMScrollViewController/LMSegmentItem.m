@@ -13,18 +13,14 @@
 - (instancetype)initWithTitle:(NSString *)title
              normalTitleColor:(UIColor *)normalTitleColor
              selectTitleColor:(UIColor *)selectTitleColor
-               normalTextFont:(NSString *)normalTextFont
-                 isShowRedDot:(BOOL)isShowRedDot{
+               normalTextFont:(NSString *)normalTextFont{
     
     if (self = [super init]) {
         
         self.title = title;
-        
         self.normalTitleColor = normalTitleColor;
         self.selectTitleColor = selectTitleColor;
-        
         self.normalTextFont = normalTextFont;
-        self.isShowRedDot = isShowRedDot;
     }
     
     return self;

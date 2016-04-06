@@ -33,6 +33,9 @@
 		89B23DDD1CA8D1BE00B8F364 /* THColor颜色名称图.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B23DDB1CA8D1BE00B8F364 /* THColor颜色名称图.png */; };
 		89B23DE01CA8D43C00B8F364 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */; };
 		89B23DE51CA905DA00B8F364 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DE41CA905DA00B8F364 /* TestViewController.m */; };
+		89B297531CB35B8E0015F4AD /* LMBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B297521CB35B8E0015F4AD /* LMBadgeView.m */; };
+		89B297561CB3AB750015F4AD /* LMSlidingLineSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B297551CB3AB750015F4AD /* LMSlidingLineSegmentView.m */; };
+		89B297591CB3ABDE0015F4AD /* LMZoomSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B297581CB3ABDE0015F4AD /* LMZoomSegmentView.m */; };
 		9E1D0D1F00EFBF0CC3BD1FF4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1AB08059F0323C022A96CD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +112,12 @@
 		89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		89B23DE31CA905DA00B8F364 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = ../TestViewController.h; sourceTree = "<group>"; };
 		89B23DE41CA905DA00B8F364 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = ../TestViewController.m; sourceTree = "<group>"; };
+		89B297511CB35B8E0015F4AD /* LMBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMBadgeView.h; sourceTree = "<group>"; };
+		89B297521CB35B8E0015F4AD /* LMBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMBadgeView.m; sourceTree = "<group>"; };
+		89B297541CB3AB750015F4AD /* LMSlidingLineSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSlidingLineSegmentView.h; sourceTree = "<group>"; };
+		89B297551CB3AB750015F4AD /* LMSlidingLineSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSlidingLineSegmentView.m; sourceTree = "<group>"; };
+		89B297571CB3ABDE0015F4AD /* LMZoomSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMZoomSegmentView.h; sourceTree = "<group>"; };
+		89B297581CB3ABDE0015F4AD /* LMZoomSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMZoomSegmentView.m; sourceTree = "<group>"; };
 		BB1AB08059F0323C022A96CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEE6A12A0F38B30C99DEB3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,10 +166,16 @@
 				89253C8A1CAA7BBD00922136 /* LMBaseScrollView.m */,
 				8974B9901CACB682007FDFF5 /* LMSegmentItem.h */,
 				8974B9911CACB682007FDFF5 /* LMSegmentItem.m */,
+				89B297511CB35B8E0015F4AD /* LMBadgeView.h */,
+				89B297521CB35B8E0015F4AD /* LMBadgeView.m */,
 				8974B9921CACB682007FDFF5 /* LMSegmentView.h */,
 				8974B9931CACB682007FDFF5 /* LMSegmentView.m */,
 				89253C8C1CAA7C2700922136 /* LMSegmentScrollView.h */,
 				89253C8D1CAA7C2700922136 /* LMSegmentScrollView.m */,
+				89B297541CB3AB750015F4AD /* LMSlidingLineSegmentView.h */,
+				89B297551CB3AB750015F4AD /* LMSlidingLineSegmentView.m */,
+				89B297571CB3ABDE0015F4AD /* LMZoomSegmentView.h */,
+				89B297581CB3ABDE0015F4AD /* LMZoomSegmentView.m */,
 			);
 			path = LMScrollViewController;
 			sourceTree = "<group>";
@@ -536,12 +551,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */,
+				89B297531CB35B8E0015F4AD /* LMBadgeView.m in Sources */,
+				89B297591CB3ABDE0015F4AD /* LMZoomSegmentView.m in Sources */,
 				89253C8B1CAA7BBD00922136 /* LMBaseScrollView.m in Sources */,
 				896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */,
 				89B23DD21CA8CC8900B8F364 /* LMButton.m in Sources */,
 				89898A971CA0D98100C47BF6 /* LMBaseViewController.m in Sources */,
 				8974B9941CACB682007FDFF5 /* LMSegmentItem.m in Sources */,
 				896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */,
+				89B297561CB3AB750015F4AD /* LMSlidingLineSegmentView.m in Sources */,
 				8974B9951CACB682007FDFF5 /* LMSegmentView.m in Sources */,
 				89B23DD81CA8D0E600B8F364 /* UIFont+Extension.m in Sources */,
 				89B23DE51CA905DA00B8F364 /* TestViewController.m in Sources */,
