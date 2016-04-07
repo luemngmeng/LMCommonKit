@@ -19,6 +19,9 @@
 		8942711C1CB6439E00B7F44D /* LMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894271141CB6439E00B7F44D /* LMSegmentView.m */; };
 		8942711D1CB6439E00B7F44D /* LMSlidingLineSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894271161CB6439E00B7F44D /* LMSlidingLineSegmentView.m */; };
 		8942711E1CB6439E00B7F44D /* LMZoomSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894271181CB6439E00B7F44D /* LMZoomSegmentView.m */; };
+		894271361CB64E9800B7F44D /* LMLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894271351CB64E9800B7F44D /* LMLoopScrollView.m */; };
+		8942713A1CB652B800B7F44D /* LMBaseDateSourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894271391CB652B800B7F44D /* LMBaseDateSourceModel.m */; };
+		8942713D1CB655E300B7F44D /* LMLoopScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8942713C1CB655E300B7F44D /* LMLoopScrollViewModel.m */; };
 		896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */; };
 		896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B81CA5057100AC3DBC /* LMCapitalUtil.m */; };
 		896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634BB1CA5098C00AC3DBC /* LMColor.m */; };
@@ -82,6 +85,12 @@
 		894271161CB6439E00B7F44D /* LMSlidingLineSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSlidingLineSegmentView.m; sourceTree = "<group>"; };
 		894271171CB6439E00B7F44D /* LMZoomSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMZoomSegmentView.h; sourceTree = "<group>"; };
 		894271181CB6439E00B7F44D /* LMZoomSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMZoomSegmentView.m; sourceTree = "<group>"; };
+		894271341CB64E9800B7F44D /* LMLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLoopScrollView.h; sourceTree = "<group>"; };
+		894271351CB64E9800B7F44D /* LMLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLoopScrollView.m; sourceTree = "<group>"; };
+		894271381CB652B800B7F44D /* LMBaseDateSourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMBaseDateSourceModel.h; sourceTree = "<group>"; };
+		894271391CB652B800B7F44D /* LMBaseDateSourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMBaseDateSourceModel.m; sourceTree = "<group>"; };
+		8942713B1CB655E300B7F44D /* LMLoopScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLoopScrollViewModel.h; sourceTree = "<group>"; };
+		8942713C1CB655E300B7F44D /* LMLoopScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLoopScrollViewModel.m; sourceTree = "<group>"; };
 		896634B21CA4CE1F00AC3DBC /* LMStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStringUtil.h; sourceTree = "<group>"; };
 		896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStringUtil.m; sourceTree = "<group>"; };
 		896634B51CA4D8B200AC3DBC /* LMInputLimit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMInputLimit.h; sourceTree = "<group>"; };
@@ -165,6 +174,7 @@
 				89253C891CAA7BBD00922136 /* LMBaseScrollView.h */,
 				89253C8A1CAA7BBD00922136 /* LMBaseScrollView.m */,
 				8942710C1CB6439E00B7F44D /* LMSegmentScrollView */,
+				894271331CB64E3C00B7F44D /* LMLoopScrollView */,
 			);
 			path = LMScrollViewController;
 			sourceTree = "<group>";
@@ -195,6 +205,26 @@
 				894271181CB6439E00B7F44D /* LMZoomSegmentView.m */,
 			);
 			path = LMSegmentScrollView;
+			sourceTree = "<group>";
+		};
+		894271331CB64E3C00B7F44D /* LMLoopScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				894271341CB64E9800B7F44D /* LMLoopScrollView.h */,
+				894271351CB64E9800B7F44D /* LMLoopScrollView.m */,
+				8942713B1CB655E300B7F44D /* LMLoopScrollViewModel.h */,
+				8942713C1CB655E300B7F44D /* LMLoopScrollViewModel.m */,
+			);
+			path = LMLoopScrollView;
+			sourceTree = "<group>";
+		};
+		894271371CB6529200B7F44D /* LMBaseDateSourceModel */ = {
+			isa = PBXGroup;
+			children = (
+				894271381CB652B800B7F44D /* LMBaseDateSourceModel.h */,
+				894271391CB652B800B7F44D /* LMBaseDateSourceModel.m */,
+			);
+			path = LMBaseDateSourceModel;
 			sourceTree = "<group>";
 		};
 		896634B11CA4CC1600AC3DBC /* LMStringUtil */ = {
@@ -229,6 +259,7 @@
 		89898A521CA0D86100C47BF6 = {
 			isa = PBXGroup;
 			children = (
+				894271371CB6529200B7F44D /* LMBaseDateSourceModel */,
 				89253C851CAA785300922136 /* LMBaseView */,
 				89253C811CAA6F9300922136 /* LMScrollViewController */,
 				89253C7D1CAA269800922136 /* LMNavigationController */,
@@ -560,9 +591,11 @@
 			files = (
 				89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */,
 				89253C8B1CAA7BBD00922136 /* LMBaseScrollView.m in Sources */,
+				8942713D1CB655E300B7F44D /* LMLoopScrollViewModel.m in Sources */,
 				8942711E1CB6439E00B7F44D /* LMZoomSegmentView.m in Sources */,
 				896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */,
 				89B23DD21CA8CC8900B8F364 /* LMButton.m in Sources */,
+				894271361CB64E9800B7F44D /* LMLoopScrollView.m in Sources */,
 				89898A971CA0D98100C47BF6 /* LMBaseViewController.m in Sources */,
 				8942711C1CB6439E00B7F44D /* LMSegmentView.m in Sources */,
 				8942711B1CB6439E00B7F44D /* LMSegmentScrollView.m in Sources */,
@@ -575,6 +608,7 @@
 				89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */,
 				89253C841CAA6FB900922136 /* LMBaseScrollViewController.m in Sources */,
 				894271191CB6439E00B7F44D /* LMBadgeView.m in Sources */,
+				8942713A1CB652B800B7F44D /* LMBaseDateSourceModel.m in Sources */,
 				89898A9B1CA0D9F200C47BF6 /* LMViewControllerManager.m in Sources */,
 				89253C771CAA179600922136 /* TestOneViewController.m in Sources */,
 				89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */,
