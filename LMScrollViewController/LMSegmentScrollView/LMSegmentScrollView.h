@@ -13,10 +13,11 @@
 #import "Masonry.h"
 #import "UIFont+Extension.h"
 
+#define SEGMENT_SCROLLVITE_COUNT  4
 #define  SEGMENT_VIEW_TAG   10087
 #define  CONTENT_BUTTON_TAG   11087
 #define  CONTENT_BUTTON_TEXT_FONT  @"14"
-#define  SEGMENTVIEW_WIDTH  (CGFloat)self.frame.size.width / 4
+#define  SEGMENTVIEW_WIDTH  (CGFloat)self.frame.size.width / SEGMENT_SCROLLVITE_COUNT
 
 @interface LMSegmentScrollView : LMBaseScrollView
 

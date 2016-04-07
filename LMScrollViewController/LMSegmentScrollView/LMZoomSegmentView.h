@@ -6,8 +6,9 @@
 //  Copyright © 2016 Hangzhou TaiXuan Network Technology Co., Ltd. All rights reserved.
 //
 
-#import "LMSegmentView.h"
+#import "LMSegmentScrollView.h"
 
-@interface LMZoomSegmentView : LMSegmentView
+@interface LMZoomSegmentView : LMSegmentScrollView
+
 
 @end

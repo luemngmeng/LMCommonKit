@@ -288,6 +288,29 @@
 
 
 
+#pragma mark 向前进1取整（只针对于精确度为两位的浮点数）
++ (NSString *)roundingWithFloatingNumber:(float)floatNumber {
+    
+    NSString *floatNuberStr = [self decimalwithFormat:@"0.00" floatV:floatNumber];
+    NSArray *contentArray = [floatNuberStr componentsSeparatedByString:@"."];
+
+    int  index ;
+    // contentArray 包括小数点前后两个元素
+    if (contentArray.count >= 2){
+        index = [contentArray[0] intValue];
+        NSString *indexStr1 = [contentArray objectAtIndex:contentArray.count - 1];
+        if ([indexStr1 intValue] != 0) {
+            index = index + 1;
+        }
+    } else if (contentArray.count > 0){
+        index = [contentArray[0] intValue];
+    }
+
+    return [NSString stringWithFormat:@"%d",index];
+}
+
+
+
 #pragma mark 格式化所有带标签的文本
 +(NSString *)stringFromfilterHTML:(NSString *)html {
     

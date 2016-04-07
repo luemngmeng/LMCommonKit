@@ -115,6 +115,17 @@
 
 
 /**
+ *  向前进1取整（只针对于精确度为两位的浮点数）
+ *
+ *  @param floatNumber
+ *
+ *  @return
+ */
++ (NSString *)roundingWithFloatingNumber:(float)floatNumber;
+
+
+
+/**
  *  格式化所有带标签的文本
  *
  *  @param html 带标签的字符串

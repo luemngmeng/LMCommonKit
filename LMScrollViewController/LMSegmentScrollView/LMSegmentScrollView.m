@@ -117,7 +117,7 @@
     
     // 设置scrollow的内容
     self.scrollView.contentSize = CGSizeMake( segmentViewWidth * count, segmentViewHegith);
-    self.scrollView.pagingEnabled = YES;
+    self.scrollView.pagingEnabled = NO;
     
     
     // 配置scrollow子视图
@@ -148,6 +148,8 @@
     [self setupScrollView];
     
 }
+
+
 
 #pragma mark - Public Method
 #pragma mark 配置scrollView及子视图（重写父视图的方法）
