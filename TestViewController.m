@@ -35,18 +35,17 @@
      */
     
     
-    /*
+    
     // 导航栏左侧按钮
     self.navBarLeftItemButtonTitle = @"你好";
     [self setNavBarLeftButtonItemImageName:@"trReturn"];
-    */
+
     
     
-    /*
     // 导航栏右侧按钮
     self.navBarRightItemButtonTitle = @"爱你";
     [self setNavBarRightButtonItemImageName:@"trReturn"];
-    */
+
     
     
     /*
