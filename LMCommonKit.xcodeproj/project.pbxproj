@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89253C771CAA179600922136 /* TestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C761CAA179600922136 /* TestOneViewController.m */; };
-		89253C7A1CAA17AB00922136 /* TestTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C791CAA17AB00922136 /* TestTwoViewController.m */; };
 		89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C7F1CAA26CE00922136 /* LMNavigationController.m */; };
 		89253C841CAA6FB900922136 /* LMBaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C831CAA6FB900922136 /* LMBaseScrollViewController.m */; };
 		89253C881CAA788400922136 /* LMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C871CAA788400922136 /* LMBaseView.m */; };
@@ -43,7 +41,9 @@
 		89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DDA1CA8D1BE00B8F364 /* UIColor+Extension.m */; };
 		89B23DDD1CA8D1BE00B8F364 /* THColor颜色名称图.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B23DDB1CA8D1BE00B8F364 /* THColor颜色名称图.png */; };
 		89B23DE01CA8D43C00B8F364 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */; };
-		89B23DE51CA905DA00B8F364 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DE41CA905DA00B8F364 /* TestViewController.m */; };
+		89BD35581CBDD55700DC03F7 /* TestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BD35531CBDD55700DC03F7 /* TestOneViewController.m */; };
+		89BD35591CBDD55700DC03F7 /* TestTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BD35551CBDD55700DC03F7 /* TestTwoViewController.m */; };
+		89BD355A1CBDD55700DC03F7 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BD35571CBDD55700DC03F7 /* TestViewController.m */; };
 		9E1D0D1F00EFBF0CC3BD1FF4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1AB08059F0323C022A96CD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,10 +66,6 @@
 
 /* Begin PBXFileReference section */
 		7B5F63887E2520FABD28ABD2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		89253C751CAA179600922136 /* TestOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestOneViewController.h; path = ../TestOneViewController.h; sourceTree = "<group>"; };
-		89253C761CAA179600922136 /* TestOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestOneViewController.m; path = ../TestOneViewController.m; sourceTree = "<group>"; };
-		89253C781CAA17AB00922136 /* TestTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTwoViewController.h; path = ../TestTwoViewController.h; sourceTree = "<group>"; };
-		89253C791CAA17AB00922136 /* TestTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTwoViewController.m; path = ../TestTwoViewController.m; sourceTree = "<group>"; };
 		89253C7E1CAA26CE00922136 /* LMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNavigationController.h; sourceTree = "<group>"; };
 		89253C7F1CAA26CE00922136 /* LMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNavigationController.m; sourceTree = "<group>"; };
 		89253C821CAA6FB900922136 /* LMBaseScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMBaseScrollViewController.h; sourceTree = "<group>"; };
@@ -136,8 +132,12 @@
 		89B23DDB1CA8D1BE00B8F364 /* THColor颜色名称图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "THColor颜色名称图.png"; sourceTree = "<group>"; };
 		89B23DDE1CA8D43C00B8F364 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		89B23DE31CA905DA00B8F364 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = ../TestViewController.h; sourceTree = "<group>"; };
-		89B23DE41CA905DA00B8F364 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = ../TestViewController.m; sourceTree = "<group>"; };
+		89BD35521CBDD55700DC03F7 /* TestOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOneViewController.h; sourceTree = "<group>"; };
+		89BD35531CBDD55700DC03F7 /* TestOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOneViewController.m; sourceTree = "<group>"; };
+		89BD35541CBDD55700DC03F7 /* TestTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTwoViewController.h; sourceTree = "<group>"; };
+		89BD35551CBDD55700DC03F7 /* TestTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTwoViewController.m; sourceTree = "<group>"; };
+		89BD35561CBDD55700DC03F7 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		89BD35571CBDD55700DC03F7 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		BB1AB08059F0323C022A96CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEE6A12A0F38B30C99DEB3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -320,12 +320,12 @@
 			children = (
 				89898A611CA0D86100C47BF6 /* AppDelegate.h */,
 				89898A621CA0D86100C47BF6 /* AppDelegate.m */,
-				89B23DE31CA905DA00B8F364 /* TestViewController.h */,
-				89B23DE41CA905DA00B8F364 /* TestViewController.m */,
-				89253C751CAA179600922136 /* TestOneViewController.h */,
-				89253C761CAA179600922136 /* TestOneViewController.m */,
-				89253C781CAA17AB00922136 /* TestTwoViewController.h */,
-				89253C791CAA17AB00922136 /* TestTwoViewController.m */,
+				89BD35561CBDD55700DC03F7 /* TestViewController.h */,
+				89BD35571CBDD55700DC03F7 /* TestViewController.m */,
+				89BD35521CBDD55700DC03F7 /* TestOneViewController.h */,
+				89BD35531CBDD55700DC03F7 /* TestOneViewController.m */,
+				89BD35541CBDD55700DC03F7 /* TestTwoViewController.h */,
+				89BD35551CBDD55700DC03F7 /* TestTwoViewController.m */,
 				89898A5E1CA0D86100C47BF6 /* Supporting Files */,
 			);
 			path = LMCommonKit;
@@ -620,6 +620,7 @@
 			files = (
 				89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */,
 				89253C8B1CAA7BBD00922136 /* LMBaseScrollView.m in Sources */,
+				89BD355A1CBDD55700DC03F7 /* TestViewController.m in Sources */,
 				8942713D1CB655E300B7F44D /* LMLoopScrollViewModel.m in Sources */,
 				8942711E1CB6439E00B7F44D /* LMZoomSegmentView.m in Sources */,
 				896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */,
@@ -632,18 +633,17 @@
 				8942711D1CB6439E00B7F44D /* LMSlidingLineSegmentView.m in Sources */,
 				895ECC181CB75961009DD46D /* LMVerticalLoopScrollView.m in Sources */,
 				89B23DD81CA8D0E600B8F364 /* UIFont+Extension.m in Sources */,
-				89B23DE51CA905DA00B8F364 /* TestViewController.m in Sources */,
 				89898A601CA0D86100C47BF6 /* main.m in Sources */,
 				8942711A1CB6439E00B7F44D /* LMSegmentItem.m in Sources */,
 				89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */,
 				89253C841CAA6FB900922136 /* LMBaseScrollViewController.m in Sources */,
 				894271191CB6439E00B7F44D /* LMBadgeView.m in Sources */,
 				8942713A1CB652B800B7F44D /* LMBaseDateSourceModel.m in Sources */,
+				89BD35591CBDD55700DC03F7 /* TestTwoViewController.m in Sources */,
 				89898A9B1CA0D9F200C47BF6 /* LMViewControllerManager.m in Sources */,
-				89253C771CAA179600922136 /* TestOneViewController.m in Sources */,
 				89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */,
-				89253C7A1CAA17AB00922136 /* TestTwoViewController.m in Sources */,
 				89B23DE01CA8D43C00B8F364 /* UIImage+Extension.m in Sources */,
+				89BD35581CBDD55700DC03F7 /* TestOneViewController.m in Sources */,
 				896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */,
 				89253C881CAA788400922136 /* LMBaseView.m in Sources */,
 			);
