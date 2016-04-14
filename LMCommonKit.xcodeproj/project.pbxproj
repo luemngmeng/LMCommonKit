@@ -28,6 +28,11 @@
 		896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B31CA4CE1F00AC3DBC /* LMStringUtil.m */; };
 		896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634B81CA5057100AC3DBC /* LMCapitalUtil.m */; };
 		896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 896634BB1CA5098C00AC3DBC /* LMColor.m */; };
+		896D33DD1CBF278700E70E0B /* cmb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 896D33D81CBF278700E70E0B /* cmb.plist */; };
+		896D33DE1CBF278700E70E0B /* iqiyi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 896D33D91CBF278700E70E0B /* iqiyi.plist */; };
+		896D33DF1CBF278700E70E0B /* LMSettingsBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 896D33DB1CBF278700E70E0B /* LMSettingsBundleManager.m */; };
+		896D33E01CBF278700E70E0B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 896D33DC1CBF278700E70E0B /* Settings.bundle */; };
+		896D33E51CBF280000E70E0B /* LMWaxPatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 896D33E31CBF280000E70E0B /* LMWaxPatchManager.m */; };
 		89898A601CA0D86100C47BF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A5F1CA0D86100C47BF6 /* main.m */; };
 		89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A621CA0D86100C47BF6 /* AppDelegate.m */; };
 		89898A6E1CA0D86100C47BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89898A6D1CA0D86100C47BF6 /* Assets.xcassets */; };
@@ -105,6 +110,14 @@
 		896634B81CA5057100AC3DBC /* LMCapitalUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCapitalUtil.m; sourceTree = "<group>"; };
 		896634BA1CA5098C00AC3DBC /* LMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMColor.h; sourceTree = "<group>"; };
 		896634BB1CA5098C00AC3DBC /* LMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMColor.m; sourceTree = "<group>"; };
+		896D33D81CBF278700E70E0B /* cmb.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cmb.plist; sourceTree = "<group>"; };
+		896D33D91CBF278700E70E0B /* iqiyi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iqiyi.plist; sourceTree = "<group>"; };
+		896D33DA1CBF278700E70E0B /* LMSettingsBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSettingsBundleManager.h; sourceTree = "<group>"; };
+		896D33DB1CBF278700E70E0B /* LMSettingsBundleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSettingsBundleManager.m; sourceTree = "<group>"; };
+		896D33DC1CBF278700E70E0B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		896D33E21CBF280000E70E0B /* LMWaxPatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWaxPatchManager.h; sourceTree = "<group>"; };
+		896D33E31CBF280000E70E0B /* LMWaxPatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMWaxPatchManager.m; sourceTree = "<group>"; };
+		896D33E41CBF280000E70E0B /* LMWaxPatchManagerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWaxPatchManagerKit.h; sourceTree = "<group>"; };
 		897949211CA3C6EC00298420 /* LMCommonkitHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMCommonkitHeader.h; sourceTree = "<group>"; };
 		89898A5B1CA0D86100C47BF6 /* LMCommonKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCommonKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89898A5F1CA0D86100C47BF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -269,6 +282,28 @@
 			path = LMCapitalUtil;
 			sourceTree = "<group>";
 		};
+		896D33D71CBF278700E70E0B /* SettingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				896D33D81CBF278700E70E0B /* cmb.plist */,
+				896D33D91CBF278700E70E0B /* iqiyi.plist */,
+				896D33DA1CBF278700E70E0B /* LMSettingsBundleManager.h */,
+				896D33DB1CBF278700E70E0B /* LMSettingsBundleManager.m */,
+				896D33DC1CBF278700E70E0B /* Settings.bundle */,
+			);
+			path = SettingsBundle;
+			sourceTree = "<group>";
+		};
+		896D33E11CBF280000E70E0B /* LMWaxPatchManager */ = {
+			isa = PBXGroup;
+			children = (
+				896D33E21CBF280000E70E0B /* LMWaxPatchManager.h */,
+				896D33E31CBF280000E70E0B /* LMWaxPatchManager.m */,
+				896D33E41CBF280000E70E0B /* LMWaxPatchManagerKit.h */,
+			);
+			path = LMWaxPatchManager;
+			sourceTree = "<group>";
+		};
 		897949201CA3C6B300298420 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +318,8 @@
 		89898A521CA0D86100C47BF6 = {
 			isa = PBXGroup;
 			children = (
+				896D33E11CBF280000E70E0B /* LMWaxPatchManager */,
+				896D33D71CBF278700E70E0B /* SettingsBundle */,
 				894271371CB6529200B7F44D /* LMBaseDateSourceModel */,
 				89253C851CAA785300922136 /* LMBaseView */,
 				89253C811CAA6F9300922136 /* LMScrollViewController */,
@@ -541,9 +578,12 @@
 			files = (
 				895ECC141CB7438A009DD46D /* guide3.png in Resources */,
 				895ECC131CB7438A009DD46D /* guide2.png in Resources */,
+				896D33E01CBF278700E70E0B /* Settings.bundle in Resources */,
 				895ECC121CB7438A009DD46D /* guide1.png in Resources */,
+				896D33DE1CBF278700E70E0B /* iqiyi.plist in Resources */,
 				89B23DDD1CA8D1BE00B8F364 /* THColor颜色名称图.png in Resources */,
 				895ECC151CB7438A009DD46D /* guide4.png in Resources */,
+				896D33DD1CBF278700E70E0B /* cmb.plist in Resources */,
 				89898A711CA0D86100C47BF6 /* LaunchScreen.storyboard in Resources */,
 				89898A6E1CA0D86100C47BF6 /* Assets.xcassets in Resources */,
 			);
@@ -622,6 +662,7 @@
 				89253C8B1CAA7BBD00922136 /* LMBaseScrollView.m in Sources */,
 				89BD355A1CBDD55700DC03F7 /* TestViewController.m in Sources */,
 				8942713D1CB655E300B7F44D /* LMLoopScrollViewModel.m in Sources */,
+				896D33E51CBF280000E70E0B /* LMWaxPatchManager.m in Sources */,
 				8942711E1CB6439E00B7F44D /* LMZoomSegmentView.m in Sources */,
 				896634B41CA4CE1F00AC3DBC /* LMStringUtil.m in Sources */,
 				89B23DD21CA8CC8900B8F364 /* LMButton.m in Sources */,
@@ -643,6 +684,7 @@
 				89898A9B1CA0D9F200C47BF6 /* LMViewControllerManager.m in Sources */,
 				89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */,
 				89B23DE01CA8D43C00B8F364 /* UIImage+Extension.m in Sources */,
+				896D33DF1CBF278700E70E0B /* LMSettingsBundleManager.m in Sources */,
 				89BD35581CBDD55700DC03F7 /* TestOneViewController.m in Sources */,
 				896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */,
 				89253C881CAA788400922136 /* LMBaseView.m in Sources */,
