@@ -15,6 +15,8 @@
 #import "LMSlidingLineSegmentView.h"
 #import "LMZoomSegmentView.h"
 
+#import "JCAlertView.h"
+
 @interface TestViewController ()
 
 @end
@@ -35,17 +37,18 @@
      */
     
     
-    
+    /*
     // 导航栏左侧按钮
     self.navBarLeftItemButtonTitle = @"你好";
     [self setNavBarLeftButtonItemImageName:@"trReturn"];
-
+    */
     
     
+    /*
     // 导航栏右侧按钮
     self.navBarRightItemButtonTitle = @"爱你";
     [self setNavBarRightButtonItemImageName:@"trReturn"];
-
+    */
     
     
     /*
@@ -61,6 +64,7 @@
     testButton.clipsToBounds = YES;
     [self.view addSubview:testButton];
      */
+    
     
     /*
     // 测试segmentScrollView
@@ -81,6 +85,12 @@
     [zoomSegmentView setupScrollViewWithModel:nil];
     [self.view addSubview:zoomSegmentView];
      */
+    
+    
+    // 测试自定义的最左对齐的UIAlertView
+    [JCAlertView showOneButtonWithTitle:@"title" Message:@"message" ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"好的" Click:^{
+        NSLog(@"确定好的");
+    }];
 }
 
 #pragma mark 导航栏左侧按钮实现方法

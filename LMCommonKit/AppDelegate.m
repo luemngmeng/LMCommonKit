@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "LMCommonkitHeader.h"
 
 #import "TestViewController.h"
 #import "LMNavigationController.h"
+
+#import "LMWaxPatchManager.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -20,6 +23,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /*
+    // 测试热修复功能
+    [LMWaxPatchManager start];
+     */
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -49,6 +57,11 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    /*
+    // 测试热修复功能
+    [LMWaxPatchManager updatePatchFiles];
+     */
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

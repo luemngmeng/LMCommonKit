@@ -4,7 +4,7 @@
 //
 //  Created by mengmenglu on 4/12/16.
 //  Copyright © 2016 Hangzhou TaiXuan Network Technology Co., Ltd. All rights reserved.
-//
+//  一般使用lua这种方法进行热修复怕苹果审核不通过，所以建议使用苹果官方支持的脚本语言JSPatch热修复
 
 #import <Foundation/Foundation.h>
 
