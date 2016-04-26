@@ -87,10 +87,12 @@
      */
     
     
+    /*
     // 测试自定义的最左对齐的UIAlertView
     [JCAlertView showOneButtonWithTitle:@"title" Message:@"message" ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"好的" Click:^{
         NSLog(@"确定好的");
     }];
+     */
 }
 
 #pragma mark 导航栏左侧按钮实现方法

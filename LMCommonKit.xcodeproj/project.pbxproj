@@ -39,6 +39,8 @@
 		896D34041CBF3ECF00E70E0B /* LMAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 896D34031CBF3ECF00E70E0B /* LMAlertUtil.m */; };
 		896D34081CBF3F7200E70E0B /* WCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 896D34071CBF3F7200E70E0B /* WCAlertView.m */; };
 		896D340C1CBF40EF00E70E0B /* JCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 896D340B1CBF40EF00E70E0B /* JCAlertView.m */; };
+		897859931CCF36EF00028B2E /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 897859921CCF36EF00028B2E /* UIImage+GIF.m */; };
+		897859961CCF370400028B2E /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 897859951CCF370400028B2E /* UIView+Utils.m */; };
 		89898A601CA0D86100C47BF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A5F1CA0D86100C47BF6 /* main.m */; };
 		89898A631CA0D86100C47BF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A621CA0D86100C47BF6 /* AppDelegate.m */; };
 		89898A6E1CA0D86100C47BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89898A6D1CA0D86100C47BF6 /* Assets.xcassets */; };
@@ -136,6 +138,10 @@
 		896D34071CBF3F7200E70E0B /* WCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertView.m; sourceTree = "<group>"; };
 		896D340A1CBF40EF00E70E0B /* JCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertView.h; sourceTree = "<group>"; };
 		896D340B1CBF40EF00E70E0B /* JCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertView.m; sourceTree = "<group>"; };
+		897859911CCF36EF00028B2E /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		897859921CCF36EF00028B2E /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		897859941CCF370400028B2E /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		897859951CCF370400028B2E /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		897949211CA3C6EC00298420 /* LMCommonkitHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMCommonkitHeader.h; sourceTree = "<group>"; };
 		89898A5B1CA0D86100C47BF6 /* LMCommonKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCommonKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89898A5F1CA0D86100C47BF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -226,6 +232,8 @@
 			children = (
 				89253C861CAA788400922136 /* LMBaseView.h */,
 				89253C871CAA788400922136 /* LMBaseView.m */,
+				897859941CCF370400028B2E /* UIView+Utils.h */,
+				897859951CCF370400028B2E /* UIView+Utils.m */,
 			);
 			path = LMBaseView;
 			sourceTree = "<group>";
@@ -506,6 +514,8 @@
 		89B23DD31CA8D00300B8F364 /* LMUIImage */ = {
 			isa = PBXGroup;
 			children = (
+				897859911CCF36EF00028B2E /* UIImage+GIF.h */,
+				897859921CCF36EF00028B2E /* UIImage+GIF.m */,
 				89B23DDE1CA8D43C00B8F364 /* UIImage+Extension.h */,
 				89B23DDF1CA8D43C00B8F364 /* UIImage+Extension.m */,
 			);
@@ -755,6 +765,7 @@
 				8942711D1CB6439E00B7F44D /* LMSlidingLineSegmentView.m in Sources */,
 				895ECC181CB75961009DD46D /* LMVerticalLoopScrollView.m in Sources */,
 				896D340C1CBF40EF00E70E0B /* JCAlertView.m in Sources */,
+				897859931CCF36EF00028B2E /* UIImage+GIF.m in Sources */,
 				89B23DD81CA8D0E600B8F364 /* UIFont+Extension.m in Sources */,
 				89898A601CA0D86100C47BF6 /* main.m in Sources */,
 				8942711A1CB6439E00B7F44D /* LMSegmentItem.m in Sources */,
@@ -771,6 +782,7 @@
 				896D33DF1CBF278700E70E0B /* LMSettingsBundleManager.m in Sources */,
 				89BD35581CBDD55700DC03F7 /* TestOneViewController.m in Sources */,
 				896634B91CA5057100AC3DBC /* LMCapitalUtil.m in Sources */,
+				897859961CCF370400028B2E /* UIView+Utils.m in Sources */,
 				89253C881CAA788400922136 /* LMBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
