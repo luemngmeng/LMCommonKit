@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 #import "TestOneViewController.h"
 #import "TestTwoViewController.h"
+#import "TestThreeViewController.h"
 
 #import "LMViewControllerManager.h"
 #import "LMSegmentScrollView.h"
@@ -93,7 +94,24 @@
         NSLog(@"确定好的");
     }];
      */
+    
+    
+    // 测试自定义刷新效果的
+    UIButton *testRefreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    testRefreshButton.frame = CGRectMake(100, 300, 200, 49);
+    [testRefreshButton setTitle:@"测试刷新功能" forState:UIControlStateNormal];
+    [testRefreshButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [testRefreshButton setBackgroundColor:[UIColor redColor]];
+    testRefreshButton.layer.cornerRadius = 5;
+    testRefreshButton.layer.masksToBounds = YES;
+    
+    [testRefreshButton addTarget:self action:@selector(testRefreshBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:testRefreshButton];
+    
+    
 }
+
 
 #pragma mark 导航栏左侧按钮实现方法
 - (void)navBarLeftItemButtonClick {
@@ -118,6 +136,13 @@
     [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestOneViewController"];
 }
 
+
+#pragma mark 测试刷新功能的按钮
+- (void)testRefreshBtnClick:(UIButton *)button {
+    
+    NSLog(@"测试刷新功能的按钮点击事件");
+    [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestThreeViewController"];
+}
 
 
 - (void)didReceiveMemoryWarning {
