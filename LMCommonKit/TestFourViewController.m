@@ -1,41 +1,32 @@
 //
-//  TestThreeViewController.m
+//  TestFourViewController.m
 //  LMCommonKit
 //
-//  Created by mengmenglu on 4/28/16.
+//  Created by mengmenglu on 5/6/16.
 //  Copyright © 2016 Hangzhou TaiXuan Network Technology Co., Ltd. All rights reserved.
-//  带有刷新功能的视图
+//
 
-#import "TestThreeViewController.h"
+#import "TestFourViewController.h"
 
-@interface TestThreeViewController ()
+@interface TestFourViewController ()
 
 @end
 
-@implementation TestThreeViewController
-
-
-#pragma mark - lifeCycle
+@implementation TestFourViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"测试刷新功能";
-    self.needReloadData = YES;  // 是否开启自动刷新
-    self.isPullToRefreshEnable = YES;
-    self.isInfiniteToRefreshEnable = NO;
+    self.title = @"测试刷新功能,不带下拉刷新界面";
+    self.isShowCustomBottomRefresh = YES;
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-#pragma mark - Private Method
-
 
 #pragma mark - Public Method
 - (void)requestTableViewDataSource {
@@ -60,9 +51,10 @@
     
     if (dateSource.count !=0 ) {
         //[self requestRefreshTableViewDataSourceSuccess:dateSource];
+        [self.dataSource addObjectsFromArray:dateSource];
+        [self.tableView reloadData];
     }
-
+    
 }
-
 
 @end

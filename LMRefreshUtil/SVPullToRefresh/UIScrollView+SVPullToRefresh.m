@@ -81,7 +81,6 @@ static char UIScrollViewPullToRefreshView;
         [self.pullToRefreshView setTitle:@"下拉刷新" forState:SVPullToRefreshStateStopped];
         [self.pullToRefreshView setTitle:@"松开更新" forState: SVPullToRefreshStateTriggered];
         [self.pullToRefreshView setTitle:@"加载中..." forState: SVPullToRefreshStateLoading];
-        
         [self.pullToRefreshView setSubtitle:@"暂未更新" forState:SVPullToRefreshStateAll];
     }
 }

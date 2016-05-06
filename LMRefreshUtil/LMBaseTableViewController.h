@@ -49,7 +49,7 @@
 /**
  *  默认的cell重用标示符
  */
-@property (nonatomic, strong) NSString * defaultCellReuseIdentifier;
+@property (nonatomic, strong) NSString *defaultCellReuseIdentifier;
 
 
 /**
@@ -103,6 +103,33 @@
  *  @param animated 是否开启动画效果
  */
 - (void)scrollToBottom:(BOOL)animated;
+
+
+#pragma mark ***************************************加载刷新有关的操作*************************************************
+/**
+ *  请求列表数据（需重写），需要调用[super requestTableViewDataSource];
+ */
+- (void)requestTableViewDataSource;
+
+
+/**
+ *  列表数据加载成功后调用
+ *
+ *  @param dataSource 服务器返回的一页的数据
+ */
+- (void)requestTableViewDataSourceSuccess:(NSArray *)dataSource;
+
+
+/**
+ *  列表数据加载失败后调用
+ */
+- (void)requestTableViewDataSourceFailure;
+
+
+/**
+ *  列表数据加载失败后调用，并带有加载失败的原因
+ */
+- (void)requestTableViewDataSourceFailureWithResult:(id)result;
 
 
 @end

@@ -1,19 +1,18 @@
 //
-//  LMRefreshDateSourceLoadFailView.m
+//  LMRefreshDateSourceNetworkErrorView.m
 //  LMCommonKit
 //
-//  Created by mengmenglu on 4/28/16.
+//  Created by mengmenglu on 5/3/16.
 //  Copyright © 2016 Hangzhou TaiXuan Network Technology Co., Ltd. All rights reserved.
-//  刷新数据失败，点击屏幕重新加载
+//  刷新数据时，网络出错
 
-#import "LMRefreshDateSourceLoadFailView.h"
+#import "LMRefreshDateSourceNetworkErrorView.h"
 
 #import "LMCommonkitHeader.h"
 #import "UIColor+Extension.h"
 #import "Masonry.h"
 
-@interface LMRefreshDateSourceLoadFailView ()
-
+@interface LMRefreshDateSourceNetworkErrorView ()
 
 /**
  *  加载失败的图片
@@ -34,7 +33,7 @@
 
 @end
 
-@implementation LMRefreshDateSourceLoadFailView
+@implementation LMRefreshDateSourceNetworkErrorView
 
 
 #pragma mark - lifeCyle
@@ -50,7 +49,7 @@
         [self setupSubView];
         
         // 添加点击手势，重新加载
-        UITapGestureRecognizer *reloadTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(reloadTapClickWithRefreshFailure:)];
+        UITapGestureRecognizer *reloadTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(reloadTapClickWithNetwotkError:)];
         [self addGestureRecognizer:reloadTap];
         
     }
@@ -82,7 +81,7 @@
     // 加载失败label
     self.loadFailureLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,125,200,30)];
     self.loadFailureLabel.textAlignment = NSTextAlignmentCenter;
-    self.loadFailureLabel.text = @"加载失败";
+    self.loadFailureLabel.text = @"网络无法连接";
     self.loadFailureLabel.font = [UIFont systemFontOfSize:14];
     self.loadFailureLabel.textColor =[UIColor colorWithRed:201.0/255.0f green:201.0/255.0f blue:201.0/255.0f alpha:1.0];
     [self addSubview:self.loadFailureLabel];
@@ -117,13 +116,15 @@
 
 
 #pragma mark - Public Method
-- (void)reloadTapClickWithRefreshFailure:(UITapGestureRecognizer *)tap {
+- (void)reloadTapClickWithNetwotkError:(UITapGestureRecognizer *)tap {
     
     // 开始回调，重新加载
-    if (self.delegate && [self.delegate respondsToSelector:@selector(reloadViewPressedWithRefreshFailure)]) {
-        [self.delegate reloadViewPressedWithRefreshFailure];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(reloadViewPressedWithNetworkFailure)]) {
+        [self.delegate reloadViewPressedWithNetworkFailure];
     }
 }
+
+
 
 
 @end

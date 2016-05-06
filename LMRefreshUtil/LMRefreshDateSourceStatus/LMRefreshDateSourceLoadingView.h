@@ -10,4 +10,16 @@
 
 @interface LMRefreshDateSourceLoadingView : LMBaseView
 
+/**
+ *  正在加载视图（带有加载动画）
+ */
+@property (nonatomic,strong) UIImageView *loadingImageView;
+
+
+/**
+ *  加载中的文字
+ */
+@property (nonatomic,strong) UILabel *loadingLabel;
+
+
 @end

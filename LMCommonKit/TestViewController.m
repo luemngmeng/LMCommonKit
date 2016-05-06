@@ -141,7 +141,7 @@
 - (void)testRefreshBtnClick:(UIButton *)button {
     
     NSLog(@"测试刷新功能的按钮点击事件");
-    [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestThreeViewController"];
+    [[LMViewControllerManager shareManager] pushViewControllerWithName:@"TestFourViewController"];
 }
 
 

@@ -28,4 +28,15 @@
 @property (assign, nonatomic) NSInteger pageSize;
 
 
+/**
+ *  默认数据(pageNum是1 totalPage是 0 pageSize是 10)
+ *
+ *  @param 10 默认每页10条数据
+ *
+ *  @return pageModel对象
+ */
+
+- (void)defaultDateInfo;
+
+
 @end

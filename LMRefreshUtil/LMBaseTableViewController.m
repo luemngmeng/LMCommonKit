@@ -187,6 +187,7 @@
 }
 
 
+// 设置分割线与cell边框的间距为0
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // Remove seperator inset
@@ -225,9 +226,8 @@
             }
         }
     }
-    
-    
 }
+
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
@@ -235,10 +235,6 @@
         
         [self requestTableViewDataSource];
         
-//        if ([self.delegate respondsToSelector:@selector(tableViewWillRequestDateSource)]) {
-//            
-//            [self.delegate tableViewWillRequestDateSource];
-//        }
     }
 }
 
@@ -270,9 +266,9 @@
         [refreshLgogImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             
             make.centerX.equalTo(_customBottomRefreshBgView);
-            make.bottom.equalTo(_customBottomRefreshBgView);
+            make.centerY.equalTo(_customBottomRefreshBgView);
             make.width.mas_equalTo(@(142 * DEVICE_SCREEN_WIDTH_SCALE_6));
-            make.height.mas_equalTo(@(56 * DEVICE_SCREEN_WIDTH_SCALE_6));
+            make.height.mas_equalTo(@(60 * DEVICE_SCREEN_WIDTH_SCALE_6));
             
         }];
         

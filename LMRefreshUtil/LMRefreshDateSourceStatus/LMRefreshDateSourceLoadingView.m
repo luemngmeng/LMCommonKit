@@ -15,18 +15,6 @@
 @interface LMRefreshDateSourceLoadingView ()
 
 
-/**
- *  正在加载视图（带有加载动画）
- */
-@property (nonatomic,strong) UIImageView *loadingImageView;
-
-
-/**
- *  加载中的文字
- */
-@property (nonatomic,strong) UILabel *loadingLabel;
-
-
 @end
 
 @implementation LMRefreshDateSourceLoadingView
@@ -84,11 +72,12 @@
     
     // 添加加载动画视图
     self.loadingImageView = [[UIImageView alloc] init];
+    self.loadingImageView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.loadingImageView];
     [self.loadingImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(self);
-        make.centerY.equalTo(self).with.offset(0);
+        make.centerY.equalTo(self).with.offset(-50);
         make.width.mas_equalTo(@100);
         make.width.mas_equalTo(@100);
         
@@ -120,7 +109,7 @@
     // 添加正在加载状态的label
     self.loadingLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.loadingLabel.textAlignment = NSTextAlignmentCenter;
-    self.loadingLabel.text = @"努力加载中...";
+    self.loadingLabel.text = @"    努力加载中...";
     self.loadingLabel.font = [UIFont systemFontOfSize:14];
     self.loadingLabel.textColor =[UIColor colorWithRed:201.0/255.0f green:201.0/255.0f blue:201.0/255.0f alpha:1.0];
     [self addSubview:self.loadingLabel];

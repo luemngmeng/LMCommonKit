@@ -8,14 +8,19 @@
 
 #import "LMBaseTableViewController.h"
 
-#import "SVPullToRefresh.h"
-//#import "UIScrollView+EmptyDataView.h"
-#import "LMLoadMoreView.h"
-#import "THTableLoadFailView.h"
-#import "THResult.h"
-
 #import "LMPageModel.h"
 
+#import "SVPullToRefresh.h"
+#import "LMLoadMoreView.h"
+#import "LMRefreshDateSourceLoadFailView.h"
+
+/*
+ *  刷新的几种状态视图
+ */
+#import "LMRefreshDateSourceLoadEmptyView.h"
+#import "LMRefreshDateSourceLoadFailView.h"
+#import "LMRefreshDateSourceLoadingView.h"
+#import "LMRefreshDateSourceNetworkErrorView.h"
 
 /**
  *  tableView 加载状态
@@ -91,5 +96,37 @@ typedef NS_ENUM(NSInteger, LMRefreshDateSourceStatus) {
  *  加载更多
  */
 - (void)infiniteToRefresh;
+
+
+/**************************************************几种刷新状态视图*************************************************/
+/**
+ *  显示正在加载视图
+ */
+- (void)showLoadingView;
+
+
+/**
+ *  显示数据库异常加载失败视图
+ */
+- (void)showLoadFailureWithDatabaseExceptionView;
+
+
+/**
+ *  显示网络错误加载失败视图
+ */
+- (void)showLoadFailureWithNetworkErrorView;
+
+
+/**
+ *  显示加载成功数据为空视图
+ */
+- (void)showLoadSuccessWithEmptyDataView;
+
+
+/**
+ *  显示加载成功，回收其他非成功视图
+ */
+- (void)showViewWithSuccessStatues;
+
 
 @end

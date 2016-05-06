@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8914FC831CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8914FC821CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.m */; };
 		89253C801CAA26CE00922136 /* LMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C7F1CAA26CE00922136 /* LMNavigationController.m */; };
 		89253C841CAA6FB900922136 /* LMBaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C831CAA6FB900922136 /* LMBaseScrollViewController.m */; };
 		89253C881CAA788400922136 /* LMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89253C871CAA788400922136 /* LMBaseView.m */; };
@@ -61,6 +62,7 @@
 		89898A871CA0D86100C47BF6 /* LMCommonKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A861CA0D86100C47BF6 /* LMCommonKitUITests.m */; };
 		89898A971CA0D98100C47BF6 /* LMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A961CA0D98100C47BF6 /* LMBaseViewController.m */; };
 		89898A9B1CA0D9F200C47BF6 /* LMViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89898A9A1CA0D9F200C47BF6 /* LMViewControllerManager.m */; };
+		8995CCAA1CDCA75100D67D67 /* TestFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8995CCA91CDCA75100D67D67 /* TestFourViewController.m */; };
 		89B23DD21CA8CC8900B8F364 /* LMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DD11CA8CC8900B8F364 /* LMButton.m */; };
 		89B23DD81CA8D0E600B8F364 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DD71CA8D0E600B8F364 /* UIFont+Extension.m */; };
 		89B23DDC1CA8D1BE00B8F364 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B23DDA1CA8D1BE00B8F364 /* UIColor+Extension.m */; };
@@ -91,6 +93,8 @@
 
 /* Begin PBXFileReference section */
 		7B5F63887E2520FABD28ABD2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8914FC811CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRefreshDateSourceNetworkErrorView.h; sourceTree = "<group>"; };
+		8914FC821CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRefreshDateSourceNetworkErrorView.m; sourceTree = "<group>"; };
 		89253C7E1CAA26CE00922136 /* LMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNavigationController.h; sourceTree = "<group>"; };
 		89253C7F1CAA26CE00922136 /* LMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNavigationController.m; sourceTree = "<group>"; };
 		89253C821CAA6FB900922136 /* LMBaseScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMBaseScrollViewController.h; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		89898A961CA0D98100C47BF6 /* LMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMBaseViewController.m; sourceTree = "<group>"; };
 		89898A991CA0D9F200C47BF6 /* LMViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMViewControllerManager.h; sourceTree = "<group>"; };
 		89898A9A1CA0D9F200C47BF6 /* LMViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMViewControllerManager.m; sourceTree = "<group>"; };
+		8995CCA81CDCA75100D67D67 /* TestFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFourViewController.h; sourceTree = "<group>"; };
+		8995CCA91CDCA75100D67D67 /* TestFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFourViewController.m; sourceTree = "<group>"; };
 		89B23DD01CA8CC8900B8F364 /* LMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMButton.h; sourceTree = "<group>"; };
 		89B23DD11CA8CC8900B8F364 /* LMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMButton.m; sourceTree = "<group>"; };
 		89B23DD61CA8D0E600B8F364 /* UIFont+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
@@ -337,6 +343,8 @@
 				89626C4E1CD1F5E600E039A7 /* LMRefreshDateSourceLoadEmptyView.m */,
 				89626C501CD1F89700E039A7 /* LMRefreshDateSourceLoadFailView.h */,
 				89626C511CD1F89700E039A7 /* LMRefreshDateSourceLoadFailView.m */,
+				8914FC811CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.h */,
+				8914FC821CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.m */,
 			);
 			path = LMRefreshDateSourceStatus;
 			sourceTree = "<group>";
@@ -533,6 +541,8 @@
 				89BD35551CBDD55700DC03F7 /* TestTwoViewController.m */,
 				89626C3E1CD1BEF600E039A7 /* TestThreeViewController.h */,
 				89626C3F1CD1BEF600E039A7 /* TestThreeViewController.m */,
+				8995CCA81CDCA75100D67D67 /* TestFourViewController.h */,
+				8995CCA91CDCA75100D67D67 /* TestFourViewController.m */,
 				89898A5E1CA0D86100C47BF6 /* Supporting Files */,
 			);
 			path = LMCommonKit;
@@ -854,9 +864,11 @@
 				896634BC1CA5098C00AC3DBC /* LMColor.m in Sources */,
 				8942711D1CB6439E00B7F44D /* LMSlidingLineSegmentView.m in Sources */,
 				895ECC181CB75961009DD46D /* LMVerticalLoopScrollView.m in Sources */,
+				8995CCAA1CDCA75100D67D67 /* TestFourViewController.m in Sources */,
 				896D340C1CBF40EF00E70E0B /* JCAlertView.m in Sources */,
 				8978599E1CCF402900028B2E /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				897859931CCF36EF00028B2E /* UIImage+GIF.m in Sources */,
+				8914FC831CD83BC2006F2DB0 /* LMRefreshDateSourceNetworkErrorView.m in Sources */,
 				89B23DD81CA8D0E600B8F364 /* UIFont+Extension.m in Sources */,
 				89898A601CA0D86100C47BF6 /* main.m in Sources */,
 				8942711A1CB6439E00B7F44D /* LMSegmentItem.m in Sources */,
