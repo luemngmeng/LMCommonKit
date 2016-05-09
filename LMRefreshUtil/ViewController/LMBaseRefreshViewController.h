@@ -22,6 +22,11 @@
 #import "LMRefreshDateSourceLoadingView.h"
 #import "LMRefreshDateSourceNetworkErrorView.h"
 
+
+// 自定义底部刷新背景视图的高度
+#define kCustom_bottom_refresh_bgView_height   100*DEVICE_SCREEN_WIDTH_SCALE_6
+
+
 /**
  *  tableView 加载状态
  */
@@ -63,6 +68,12 @@ typedef NS_ENUM(NSInteger, LMRefreshDateSourceStatus) {
 
 
 /**
+ *  是否需要刷新当前页面的数据,请求完数据后因该赋值为NO
+ */
+@property (nonatomic, assign) BOOL needReloadData;
+
+
+/**
  *  是否开启下拉刷新
  */
 @property (nonatomic, assign) BOOL isPullToRefreshEnable;
@@ -86,19 +97,7 @@ typedef NS_ENUM(NSInteger, LMRefreshDateSourceStatus) {
 @property (nonatomic, strong) LMPageModel *pageInfo;
 
 
-/**
- *  下拉刷新
- */
-- (void)pullToRefresh;
-
-
-/**
- *  加载更多
- */
-- (void)infiniteToRefresh;
-
-
-/**************************************************几种刷新状态视图*************************************************/
+#pragma mark **************************************************几种刷新状态视图*************************************************
 /**
  *  显示正在加载视图
  */
@@ -127,6 +126,34 @@ typedef NS_ENUM(NSInteger, LMRefreshDateSourceStatus) {
  *  显示加载成功，回收其他非成功视图
  */
 - (void)showViewWithSuccessStatues;
+
+
+#pragma mark ***************************************加载刷新有关的操作*************************************************
+/**
+ *  请求列表数据（需重写），需要调用[super requestTableViewDataSource];
+ */
+- (void)requestTableViewDataSource;
+
+
+/**
+ *  列表数据加载成功后调用
+ *
+ *  @param dataSource 服务器返回的一页的数据
+ */
+- (void)requestRefreshTableViewDataSourceSuccess:(NSArray *)dateSource ;
+
+
+/**
+ *  列表数据加载失败后调用
+ */
+- (void)requestTableViewDataSourceFailure;
+
+
+/**
+ *  列表数据加载失败后调用，并带有加载失败的原因
+ */
+- (void)requestTableViewDataSourceFailureWithResult:(id)result;
+
 
 
 @end

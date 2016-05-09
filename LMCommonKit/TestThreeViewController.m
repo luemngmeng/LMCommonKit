@@ -22,9 +22,9 @@
     // Do any additional setup after loading the view.
     
     self.title = @"测试刷新功能";
-    self.needReloadData = YES;  // 是否开启自动刷新
+    //self.needReloadData = YES;  // 是否开启自动刷新
     self.isPullToRefreshEnable = YES;
-    self.isInfiniteToRefreshEnable = NO;
+    self.isInfiniteToRefreshEnable = YES;
 }
 
 
@@ -40,7 +40,7 @@
 #pragma mark - Public Method
 - (void)requestTableViewDataSource {
     
-    [self performSelector:@selector(testMethod) withObject:self afterDelay:3.0];
+    [self performSelector:@selector(testMethod) withObject:self afterDelay:1.0];
     
 }
 
@@ -58,9 +58,9 @@
         
     }
     
-    if (dateSource.count !=0 ) {
-        //[self requestRefreshTableViewDataSourceSuccess:dateSource];
-    }
+    
+    [self requestRefreshTableViewDataSourceSuccess:dateSource];
+
 
 }
 

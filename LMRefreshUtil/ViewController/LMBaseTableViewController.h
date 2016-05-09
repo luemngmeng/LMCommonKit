@@ -10,6 +10,10 @@
  */
 
 #import "LMBaseViewController.h"
+#import "LMCommonkitHeader.h"
+#import "UIColor+Extension.h"
+#import "Masonry.h"
+#import "UIView+Utils.h"
 
 @interface LMBaseTableViewController : LMBaseViewController <UITableViewDataSource,UITableViewDelegate> {
     
@@ -29,18 +33,6 @@
 
 
 /**
- *  自定义底部刷新背景界面
- */
-@property (nonatomic, strong) UIView *customBottomRefreshBgView;
-
-
-/**
- *  是否显示自定义刷新功能，开启则将关闭SVPullToRefresh
- */
-@property (nonatomic, assign) BOOL isShowCustomBottomRefresh;
-
-
-/**
  *  是否支持滚动到顶部
  */
 @property (nonatomic, assign) BOOL scrollToTopEnable;
@@ -56,12 +48,6 @@
  *  列表数据源
  */
 @property (nonatomic, strong) NSMutableArray *dataSource;
-
-
-/**
- *  是否需要刷新当前页面的数据,请求完数据后因该赋值为NO
- */
-@property (nonatomic, assign) BOOL needReloadData;
 
 
 
@@ -103,33 +89,5 @@
  *  @param animated 是否开启动画效果
  */
 - (void)scrollToBottom:(BOOL)animated;
-
-
-#pragma mark ***************************************加载刷新有关的操作*************************************************
-/**
- *  请求列表数据（需重写），需要调用[super requestTableViewDataSource];
- */
-- (void)requestTableViewDataSource;
-
-
-/**
- *  列表数据加载成功后调用
- *
- *  @param dataSource 服务器返回的一页的数据
- */
-- (void)requestTableViewDataSourceSuccess:(NSArray *)dataSource;
-
-
-/**
- *  列表数据加载失败后调用
- */
-- (void)requestTableViewDataSourceFailure;
-
-
-/**
- *  列表数据加载失败后调用，并带有加载失败的原因
- */
-- (void)requestTableViewDataSourceFailureWithResult:(id)result;
-
 
 @end

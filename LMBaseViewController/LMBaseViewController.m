@@ -7,9 +7,6 @@
 //
 
 #import "LMBaseViewController.h"
-#import "LMViewControllerManager.h"
-
-#import "UIImage+Extension.h"
 
 @interface LMBaseViewController () <UINavigationControllerDelegate,UIGestureRecognizerDelegate>
 

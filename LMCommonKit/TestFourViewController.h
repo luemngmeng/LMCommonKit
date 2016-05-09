@@ -7,7 +7,8 @@
 //  带有刷新功能的视图(不带下拉刷新界面)
 
 #import "LMBaseTableViewController.h"
+#import "LMCustomRefreshViewController.h"
 
-@interface TestFourViewController : LMBaseTableViewController
+@interface TestFourViewController : LMCustomRefreshViewController
 
 @end

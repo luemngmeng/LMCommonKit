@@ -40,27 +40,51 @@
 
 @implementation LMBaseRefreshViewController
 
-#pragma mark - LifeCycle
+#pragma mark - lifeCycle
+
 - (instancetype)init {
     
     self = [super init];
     
     if (self) {
         
-        self.dataSource = [[NSMutableArray alloc] init];
         self.needReloadData = YES;
-        
     }
     
     return self;
 }
 
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        
+        self.needReloadData = YES;
+    }
+    
+    return self;
+    
+}
+
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        
+        self.needReloadData = YES;
+    }
+    
+    return self;
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // 配置下拉刷新和上拉加载更多视图
-    [self setupRefreshSubView];
 
 }
 
@@ -76,6 +100,7 @@
         
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -210,6 +235,34 @@
 }
 
 
+#pragma mark 加载失败，回收其他非成功视图
+- (void)showViewWithFailureStatus {
+    
+    if (self.loadingView) {
+        if (self.loadingView.loadingImageView.isAnimating) {
+            [self.loadingView.loadingImageView stopAnimating];
+        }
+        [self dismissViewWithShowView:self.loadingView animation:NO];
+    }
+    
+    
+    if (self.loadFailureWithDatabaseExceptionView) {
+        [self dismissViewWithShowView:self.loadFailureWithDatabaseExceptionView animation:NO];
+    }
+    
+    
+    if (self.loadFailureWithNetworkErrorView) {
+        [self dismissViewWithShowView:self.loadFailureWithNetworkErrorView animation:NO];
+    }
+    
+    
+    if (self.loadSuccessWithEmptyDataView) {
+        [self dismissViewWithShowView:self.loadSuccessWithEmptyDataView animation:NO];
+    }
+    
+}
+
+
 #pragma mark 隐藏几种刷新状态的视图(是否带有动画)
 - (void)dismissViewWithShowView:(UIView *)showView animation:(BOOL)animation{
     
@@ -255,7 +308,7 @@
             break;
         }
             
-        case LMRefreshDateSourceStatusFailure: {  //  数据库异常加载失败
+        case LMRefreshDateSourceStatusFailure: {  //  数据加载失败
             
             [self showLoadFailureWithDatabaseExceptionView];
             break;
@@ -305,99 +358,10 @@
 }
 
 
-#pragma mark 设置下拉刷新和上拉加载更过的界面
-- (void)setupRefreshSubView {
-    
-    self.isPullToRefreshEnable = YES;
-    self.isInfiniteToRefreshEnable = YES;
-    self.tableView.pullToRefreshView.textColor = UIColorFromRGB(0x808080);
-    self.tableView.pullToRefreshView.arrowColor = UIColorFromRGB(0x808080);
-    
-    
-    if (self.isShowCustomBottomRefresh) {
-        self.isPullToRefreshEnable = NO;
-    }
-    
-    
-    __weak __typeof(self) weakSelf = self;
-    // 开始加载下拉刷新或上拉加载更过界面
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        
-        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC);
-        dispatch_after(time, dispatch_get_main_queue(), ^{
-           
-            // 下拉刷新
-            [weakSelf pullToRefresh];
-            
-        });
-    }];
-    
-    
-    [self.tableView addInfiniteScrollingWithActionHandler:^{
-        
-        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC);
-        dispatch_after(time, dispatch_get_main_queue(), ^{
-            
-            // 下拉刷新
-            [weakSelf infiniteToRefresh];
-            
-        });
-        
-    }];
-    
-    
-}
-
-
-#pragma mark 更新下拉刷新的时间
-- (void)updateLastPullToRefreshTime {
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.locale = [NSLocale currentLocale];
-    [formatter setDateFormat:@"MM-dd HH:mm"];
-    
-    NSDate *date = [NSDate date];
-    NSString *lastRefreshTime = [NSString stringWithFormat:@"更新于: %@", [formatter stringFromDate:date]];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:lastRefreshTime forKey:NSStringFromClass([self class])];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self.tableView.pullToRefreshView setSubtitle:lastRefreshTime forState:SVPullToRefreshStateAll];
-    
-}
-
-
-
 #pragma mark - Public Method
-#pragma mark 下拉刷新操作
-- (void)pullToRefresh {
-    
-    NSLog(@"pullToRefresh");
-    
-    // 初始化页面信息，重新加载第一页
-    [self.pageInfo defaultDateInfo];
-    self.tableView.showsInfiniteScrolling = NO; // 下拉刷新时，禁掉上拉加载更多
-    [self requestTableViewDataSource];
-    
-}
-
-
-#pragma mark 上拉加载更多操作
-- (void)infiniteToRefresh {
-    
-    NSLog(@"infiniteScrolling");
-    
-    self.pageInfo.pageNum++;
-    self.tableView.showsPullToRefresh = NO;  // 上拉加载更多时，禁掉下拉刷新
-    [self requestTableViewDataSource];
-    
-}
-
-
 #pragma mark 请求列表数据（需重写）
 - (void)requestTableViewDataSource {
     
-    [self requestRefreshTableViewDataSourceSuccess:nil];
     
 }
 
@@ -411,17 +375,11 @@
     self.tableView.showsInfiniteScrolling = self.isInfiniteToRefreshEnable;
     
     
-    // 更新下来刷新时间
-    [self updateLastPullToRefreshTime];
-    
-    
     // 执行下拉刷新操作后（在第一页刷新的时候）
     if (self.pageInfo.pageNum == 1) { // 大部分是在下拉刷新的时候（偶尔会出现上拉加载更过，除非第所有数据小于=一页数据的总和）
         
         //结束下拉刷新操作
-        if (self.tableView.pullToRefreshView.state == SVPullToRefreshStateLoading) {
-            [self.tableView.pullToRefreshView stopAnimating];
-        }
+        [self.tableView.pullToRefreshView stopAnimating];
         
         // 不需要将内容移动到最顶端
         [self scrollToTop:NO];
@@ -435,9 +393,8 @@
     if (self.pageInfo.pageNum > 1 && self.pageInfo.pageNum < self.pageInfo.totalPage) {
         
         // 结束上拉加载更过的操作
-        if (self.tableView.infiniteScrollingView.state == SVPullToRefreshStateLoading) {
-            [self.tableView.infiniteScrollingView stopAnimating];
-        }
+        [self.tableView.infiniteScrollingView stopAnimating];
+
     }
     
     
@@ -471,13 +428,58 @@
     } else {
         
         self.refreshDateSourceStatus = LMRefreshDateSourceStatusSuccess;
-
+        
     }
     
-    // 充值刷新的状态，开始刷新对应的tableView
+    // 重置刷新的状态，开始刷新对应的tableView
     self.needReloadData = NO;
     [self.tableView reloadData];
     
+}
+
+
+#pragma mark 列表数据加载失败回调
+- (void)requestTableViewDataSourceFailure {
+   
+    NSLog(@"requestTableViewDataSourceFailure");
+    self.tableView.showsPullToRefresh = self.isPullToRefreshEnable;
+    self.tableView.showsInfiniteScrolling = self.isInfiniteToRefreshEnable;
+    
+    if (self.pageInfo.pageNum == 1) {  //第一页加载失败
+        
+        //显示加载失败界面
+        // 加载第一页失败，显示加载失败界面
+        [self.tableView.pullToRefreshView stopAnimating];
+        self.refreshDateSourceStatus = LMRefreshDateSourceStatusFailure;
+        self.tableView.showsInfiniteScrolling = NO;  // 禁止上拉加载更多
+        [self.dataSource removeAllObjects];
+        
+    } else {
+        
+        self.pageInfo.pageNum--;
+        
+        // 加载更多页面失败，显示加载失败的提示
+        [self.tableView.infiniteScrollingView stopAnimating];
+        [SVProgressHUD showImage:nil status:@"加载更多失败"];
+        
+    }
+    
+    
+    [self.tableView reloadData];
+}
+
+
+#pragma mark 列表数据加载失败回调,并带有失败的原因
+- (void)requestTableViewDataSourceFailureWithResult:(id)result {
+    
+    // 加载失败，回收相应视图
+    [self showViewWithFailureStatus];
+    
+    NSLog(@"requestTableViewDataSourceFailure");
+    self.tableView.showsPullToRefresh = self.isPullToRefreshEnable;
+    self.tableView.showsInfiniteScrolling = self.isInfiniteToRefreshEnable;
+    
+#warning 后期需要补上网络加载失败的方法回调
 }
 
 

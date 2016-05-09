@@ -28,7 +28,7 @@
 - (void)defaultDateInfo {
     
     self.pageNum = 1;
-    self.totalPage = 0;
+    self.totalPage = 20;
     self.pageSize = 10;
     
 }

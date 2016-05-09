@@ -6,8 +6,8 @@
 //  Copyright © 2016 Hangzhou TaiXuan Network Technology Co., Ltd. All rights reserved.
 //  带有刷新功能的视图(带有下拉刷新界面)
 
-#import "LMBaseRefreshViewController.h"
+#import "LMOriginalRefreshViewController.h"
 
-@interface TestThreeViewController : LMBaseRefreshViewController
+@interface TestThreeViewController : LMOriginalRefreshViewController
 
 @end

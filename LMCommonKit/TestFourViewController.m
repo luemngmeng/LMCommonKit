@@ -19,9 +19,13 @@
     // Do any additional setup after loading the view.
     
     self.title = @"测试刷新功能,不带下拉刷新界面";
-    self.isShowCustomBottomRefresh = YES;
-    
 }
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -49,10 +53,15 @@
         
     }
     
-    if (dateSource.count !=0 ) {
-        //[self requestRefreshTableViewDataSourceSuccess:dateSource];
-        [self.dataSource addObjectsFromArray:dateSource];
-        [self.tableView reloadData];
+    //  刷新成功时候回调
+    [self requestRefreshTableViewDataSourceSuccess:dateSource];
+
+    
+    // 是否显示自定义刷新视图
+    if (([self.dataSource count] * 44) <= kCustom_bottom_refresh_bgView_height) {
+        self.isShowCustomBottomRefresh = NO;
+    } else {
+        self.isShowCustomBottomRefresh = YES;
     }
     
 }

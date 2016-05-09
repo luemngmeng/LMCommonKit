@@ -6,12 +6,7 @@
 //  Copyright © 2016 Hangzhou TaiXuan Network Technology Co., Ltd. All rights reserved.
 //
 
-#import "LMCommonkitHeader.h"
-#import "UIColor+Extension.h"
 #import "LMBaseTableViewController.h"
-#import "Masonry.h"
-
-#import "UIView+Utils.h"
 #import "LMBaseTableViewCell.h"
 
 /**
@@ -19,8 +14,6 @@
  */
 #define THTABLEVIEW_SEPERATE_COLOR UIColorFromRGB(0XE4E4E4)
 
-// 自定义底部刷新背景视图的高度
-#define kCustom_bottom_refresh_bgView_height   100*DEVICE_SCREEN_WIDTH_SCALE_6
 
 @interface LMBaseTableViewController ()
 
@@ -36,8 +29,7 @@
     self = [super init];
     
     if (self) {
-        
-        self.needReloadData = YES;
+
         self.scrollToTopEnable = YES;
     }
     
@@ -50,8 +42,7 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        
-        self.needReloadData = YES;
+
         self.scrollToTopEnable = YES;
     }
     
@@ -65,8 +56,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
-        
-        self.needReloadData = YES;
+
         self.scrollToTopEnable = YES;
     }
     
@@ -78,9 +68,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 添加默认底部刷新视图
-    [self.view addSubview:self.customBottomRefreshBgView];
-    
     
     // 添加刷新视图
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:self.tableViewStyle];
@@ -91,7 +78,7 @@
     
     
     // 配置UITableView视图
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
+    [self.tableView setBackgroundColor:[UIColor whiteColor]];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
     
@@ -161,7 +148,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSInteger row = [indexPath row];
-    
     LMBaseTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:self.defaultCellReuseIdentifier];
     
     if ([self.dataSource count] > row) {
@@ -210,6 +196,7 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
     
+    /*
     if (self.isShowCustomBottomRefresh) {
         
         CGFloat contentOffsetY = scrollView.contentOffset.y;
@@ -222,20 +209,21 @@
                 
             } else {
                 
-                self.needReloadData = YES;
+                //self.needReloadData = YES;
             }
         }
-    }
+    }*/
 }
 
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
+    /*
     if (self.isShowCustomBottomRefresh && self.needReloadData) {
         
         [self requestTableViewDataSource];
         
-    }
+    }*/
 }
 
 
@@ -249,42 +237,6 @@
     }
     
     return _dataSource;
-}
-
-
-#pragma mark 获取自定义底部刷新背景视图
-- (UIView *)customBottomRefreshBgView {
-    
-    if (!_customBottomRefreshBgView) {
-        
-        _customBottomRefreshBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEVICE_SCREEN_WIDTH, kCustom_bottom_refresh_bgView_height)];
-        _customBottomRefreshBgView.backgroundColor = UIColorFromRGB(0xF4F4F4);
-        _customBottomRefreshBgView.hidden = YES; // 默认这个背景视图是隐藏的
-        
-        UIImageView *refreshLgogImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_refresh.png"]];
-        [_customBottomRefreshBgView addSubview:refreshLgogImageView];
-        [refreshLgogImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            
-            make.centerX.equalTo(_customBottomRefreshBgView);
-            make.centerY.equalTo(_customBottomRefreshBgView);
-            make.width.mas_equalTo(@(142 * DEVICE_SCREEN_WIDTH_SCALE_6));
-            make.height.mas_equalTo(@(60 * DEVICE_SCREEN_WIDTH_SCALE_6));
-            
-        }];
-        
-    }
-    
-    return _customBottomRefreshBgView;
-}
-
-
-#pragma mark - Setter Method
-#pragma 是否显示自定义底部刷新背景视图
-- (void)setIsShowCustomBottomRefresh:(BOOL)isShowCustomBottomRefresh {
-    
-    _isShowCustomBottomRefresh = isShowCustomBottomRefresh;
-    self.customBottomRefreshBgView.hidden = !isShowCustomBottomRefresh;
-    
 }
 
 
@@ -325,11 +277,12 @@
     {
         NSUInteger rowCount = [self.tableView numberOfRowsInSection:0];
         
-        if (rowCount)
-        {
+        if (rowCount) {
+            
             NSUInteger i[2] = {0, rowCount - 1};
             NSIndexPath * indexPath = [NSIndexPath indexPathWithIndexes:i length:2];
             [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:animated];
+            
         }
     }
 }
