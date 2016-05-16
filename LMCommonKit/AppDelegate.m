@@ -12,7 +12,6 @@
 #import "TestViewController.h"
 #import "LMNavigationController.h"
 
-#import "LMWaxPatchManager.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -57,10 +56,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    /*
-    // 测试热修复功能
-    [LMWaxPatchManager updatePatchFiles];
-     */
 
 }
 
