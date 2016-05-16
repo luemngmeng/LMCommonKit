@@ -414,7 +414,7 @@
 
 
 #pragma mark 将json格式的字符转化成字典
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
     
     if (jsonString.length == 0) {
         

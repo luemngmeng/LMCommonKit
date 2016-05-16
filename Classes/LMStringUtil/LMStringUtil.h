@@ -195,7 +195,7 @@
  *
  *  @return 解析结果字典
  */
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
 
 
