@@ -190,4 +190,13 @@
 
 
 
+/**
+ *  把格式化的JSON格式的字符串转换成字典
+ *
+ *  @return 解析结果字典
+ */
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
+
+
 @end

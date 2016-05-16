@@ -413,5 +413,27 @@
 }
 
 
+#pragma mark 将json格式的字符转化成字典
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    
+    if (jsonString.length == 0) {
+        
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    
+    if (error) {
+        NSLog(@"json数据转化失败： %@",error);
+        return nil;
+    }
+    
+    return dict;
+    
+}
+
+
 
 @end

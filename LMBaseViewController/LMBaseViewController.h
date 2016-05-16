@@ -19,6 +19,26 @@
 typedef void(^LMBackButtonClickBlock)(void);
 
 
+/**
+ *  页面返回类型
+ */
+typedef NS_ENUM(NSInteger, THReturnType) {
+    /**
+     *  默认返回到上一级页面，pushViewController
+     */
+    THReturnTypeDefault,
+    /**
+     *  返回到跟视图控制器 pushRootViewController
+     */
+    THReturnTypeRootViewController,
+    /**
+     *  web控制器返回上一级  goback
+     */
+    THReturnTypeGoBack,
+};
+
+
+
 @interface LMBaseViewController : UIViewController  {
     
 }
