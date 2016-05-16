@@ -59,7 +59,6 @@
 		8972DC7C1CE9ACF100E8C701 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972DC401CE9ACF100E8C701 /* UIImage+Extension.m */; };
 		8972DC7D1CE9ACF100E8C701 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972DC421CE9ACF100E8C701 /* UIImage+GIF.m */; };
 		8972DC7E1CE9ACF100E8C701 /* LMViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972DC451CE9ACF100E8C701 /* LMViewControllerManager.m */; };
-		8972DC7F1CE9ACF100E8C701 /* LMWaxPatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972DC481CE9ACF100E8C701 /* LMWaxPatchManager.m */; };
 		8972DC801CE9ACF100E8C701 /* cmb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8972DC4B1CE9ACF100E8C701 /* cmb.plist */; };
 		8972DC811CE9ACF100E8C701 /* iqiyi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8972DC4C1CE9ACF100E8C701 /* iqiyi.plist */; };
 		8972DC821CE9ACF100E8C701 /* LMSettingsBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972DC4E1CE9ACF100E8C701 /* LMSettingsBundleManager.m */; };
@@ -197,9 +196,6 @@
 		8972DC421CE9ACF100E8C701 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		8972DC441CE9ACF100E8C701 /* LMViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMViewControllerManager.h; sourceTree = "<group>"; };
 		8972DC451CE9ACF100E8C701 /* LMViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMViewControllerManager.m; sourceTree = "<group>"; };
-		8972DC471CE9ACF100E8C701 /* LMWaxPatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWaxPatchManager.h; sourceTree = "<group>"; };
-		8972DC481CE9ACF100E8C701 /* LMWaxPatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMWaxPatchManager.m; sourceTree = "<group>"; };
-		8972DC491CE9ACF100E8C701 /* LMWaxPatchManagerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWaxPatchManagerKit.h; sourceTree = "<group>"; };
 		8972DC4B1CE9ACF100E8C701 /* cmb.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cmb.plist; sourceTree = "<group>"; };
 		8972DC4C1CE9ACF100E8C701 /* iqiyi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iqiyi.plist; sourceTree = "<group>"; };
 		8972DC4D1CE9ACF100E8C701 /* LMSettingsBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSettingsBundleManager.h; sourceTree = "<group>"; };
@@ -288,7 +284,6 @@
 				8972DC3B1CE9ACF100E8C701 /* LMUIFont */,
 				8972DC3E1CE9ACF100E8C701 /* LMUIImage */,
 				8972DC431CE9ACF100E8C701 /* LMViewControllerManager */,
-				8972DC461CE9ACF100E8C701 /* LMWaxPatchManager */,
 				8972DC4A1CE9ACF100E8C701 /* SettingsBundle */,
 			);
 			path = Classes;
@@ -593,16 +588,6 @@
 				8972DC451CE9ACF100E8C701 /* LMViewControllerManager.m */,
 			);
 			path = LMViewControllerManager;
-			sourceTree = "<group>";
-		};
-		8972DC461CE9ACF100E8C701 /* LMWaxPatchManager */ = {
-			isa = PBXGroup;
-			children = (
-				8972DC471CE9ACF100E8C701 /* LMWaxPatchManager.h */,
-				8972DC481CE9ACF100E8C701 /* LMWaxPatchManager.m */,
-				8972DC491CE9ACF100E8C701 /* LMWaxPatchManagerKit.h */,
-			);
-			path = LMWaxPatchManager;
 			sourceTree = "<group>";
 		};
 		8972DC4A1CE9ACF100E8C701 /* SettingsBundle */ = {
@@ -939,7 +924,6 @@
 				8972DC681CE9ACF100E8C701 /* LMBaseRefreshViewController.m in Sources */,
 				8972DC531CE9ACF100E8C701 /* JCAlertView.m in Sources */,
 				8972DC581CE9ACF100E8C701 /* UIView+Utils.m in Sources */,
-				8972DC7F1CE9ACF100E8C701 /* LMWaxPatchManager.m in Sources */,
 				8972DC591CE9ACF100E8C701 /* LMBaseViewController.m in Sources */,
 				8995CCAA1CDCA75100D67D67 /* TestFourViewController.m in Sources */,
 				8972DC641CE9ACF100E8C701 /* LMRefreshDateSourceLoadEmptyView.m in Sources */,
